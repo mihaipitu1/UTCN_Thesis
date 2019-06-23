@@ -1,0 +1,531 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.12.21)  14 JUN 2019 21:01
+entering extended mode
+**./thesis.tex
+(thesis.tex
+LaTeX2e <2018-04-01> patch level 5
+
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\report.c
+ls"
+Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
+
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size12.c
+lo"
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@chapter=\count81
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\c@figure=\count87
+\c@table=\count88
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (cs.sty
+\hour=\count89
+\minute=\count90
+\dow=\count91
+\leap=\count92
+\x=\count93
+\y=\count94
+)
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\times.
+sty"
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
+)
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\grap
+hicx.sty"
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyv
+al.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\grap
+hics.sty"
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\trig
+.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\
+graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-def\
+pdftex.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\latexsym
+.sty"
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
+)
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsma
+th.sty"
+Package: amsmath 2017/09/02 v2.17a AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amste
+xt.sty"
+Package: amstext 2000/06/29 v2.01 AMS text
+
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsge
+n.sty"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks15
+\ex@=\dimen105
+))
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsbs
+y.sty"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen106
+)
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsop
+n.sty"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count95
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count96
+\leftroot@=\count97
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count98
+\DOTSCASE@=\count99
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen107
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count100
+\c@MaxMatrixCols=\count101
+\dotsspace@=\muskip10
+\c@parentequation=\count102
+\dspbrk@lvl=\count103
+\tag@help=\toks16
+\row@=\count104
+\column@=\count105
+\maxfields@=\count106
+\andhelp@=\toks17
+\eqnshift@=\dimen108
+\alignsep@=\dimen109
+\tagshift@=\dimen110
+\tagwidth@=\dimen111
+\totwidth@=\dimen112
+\lineht@=\dimen113
+\@envbody=\toks18
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\amss
+ymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\amsf
+onts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup5
+\symAMSb=\mathgroup6
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xypic\xy.st
+y"
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xypic\xy.te
+x" Bootstrap'ing: catcodes, docmode,
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xypic\xyrec
+at.tex")
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xypic\xyidi
+oms.tex")
+
+ Xy-pic version 3.8.9 <2013/10/06>
+ Copyright (c) 1991-2013 by Kristoffer H. Rose <krisrose@tug.org> and others
+ Xy-pic is free software: see the User's Guide for details.
+
+Loading kernel: messages; fonts; allocations: state,
+\X@c=\dimen114
+\Y@c=\dimen115
+\U@c=\dimen116
+\D@c=\dimen117
+\L@c=\dimen118
+\R@c=\dimen119
+\Edge@c=\toks20
+\X@p=\dimen120
+\Y@p=\dimen121
+\U@p=\dimen122
+\D@p=\dimen123
+\L@p=\dimen124
+\R@p=\dimen125
+\Edge@p=\toks21
+\X@origin=\dimen126
+\Y@origin=\dimen127
+\X@xbase=\dimen128
+\Y@xbase=\dimen129
+\X@ybase=\dimen130
+\Y@ybase=\dimen131
+\X@min=\dimen132
+\Y@min=\dimen133
+\X@max=\dimen134
+\Y@max=\dimen135
+\lastobjectbox@=\box28
+\zerodotbox@=\box29
+\almostz@=\dimen136
+ direction,
+\d@X=\dimen137
+\d@Y=\dimen138
+\K@=\count107
+\KK@=\count108
+\Direction=\count109
+\K@dXdY=\dimen139
+\K@dYdX=\dimen140
+\xyread@=\read1
+\xywrite@=\write3
+\csp@=\count110
+\quotPTK@=\dimen141
+
+utility macros; pictures: \xy, positions,
+\swaptoks@@=\toks22
+\connectobjectbox@@=\box30
+ objects,
+\styletoks@=\toks23
+ decorations;
+kernel objects: directionals, circles, text; options; algorithms: directions,
+edges, connections;  Xy-pic loaded)
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\if
+pdf.sty"
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+)
+Package: xy 2013/10/06 Xy-pic version 3.8.9
+
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xypic\xymat
+rix.tex"  Xy-pic option: Matrix feature v.3.14
+\Row=\count111
+\Col=\count112
+\queue@=\toks24
+\queue@@=\toks25
+\qcount@=\count113
+\qcount@@=\count114
+\matrixsize@=\count115
+ loaded)
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xypic\xyarr
+ow.tex"  Xy-pic option: Arrow and Path feature v.3.9 path, \ar, loaded)
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xypic\xypdf
+.tex"  Xy-pic option: PDF driver v.1.7 loaded))
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\fontenc.
+sty"
+Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
+
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1enc.de
+f"
+File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+)) ("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ae\ae.sty"
+Package: ae 2001/02/12 1.3 Almost European Computer Modern
+
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\fontenc.
+sty"
+Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
+
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1enc.de
+f"
+File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+)
+LaTeX Font Info:    Try loading font information for T1+aer on input line 105.
+
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ae\t1aer.fd"
+File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
+)))
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ae\aecompl.st
+y"
+Package: aecompl 1998/07/23 0.9 T1 Complements for AE fonts (D. Roegel)
+)
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\fontenc.
+sty"
+Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
+
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1enc.de
+f"
+File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+))
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\algorithms\al
+gorithm.sty"
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\float\float.s
+ty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count116
+\float@exts=\toks26
+\float@box=\box31
+\@float@everytoks=\toks27
+\@floatcapt=\box32
+)
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ifthen.s
+ty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks28
+\c@algorithm=\count117
+)
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\colo
+r.sty"
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\
+color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+) (thesis.aux (guideline.aux) (apendix.aux))
+\openout1 = `thesis.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-p
+df.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count118
+\scratchdimen=\dimen142
+\scratchbox=\box33
+\nofMPsegments=\count119
+\nofMParguments=\count120
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count121
+\MPscratchDim=\dimen143
+\MPnumerator=\count122
+\makeMPintoPDFobject=\count123
+\everyMPtoPDFconversion=\toks30
+)
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epst
+opdf-base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\in
+fwarerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfe
+xt.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kv
+definekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\lt
+xcmds.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvop
+tions.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kv
+setkeys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\et
+excmds.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\if
+luatex.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+))))
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\pd
+ftexcmds.sty"
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
+LaTeX Font Info:    Try loading font information for U+lasy on input line 53.
+
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ulasy.fd
+"
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 53.
+
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa
+.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 53.
+
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb
+.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Package xypdf Info: Line width: 0.47998pt on input line 53.
+<img/tucn.jpg, id=1, 497.6994pt x 101.6598pt>
+File: img/tucn.jpg Graphic file (type jpg)
+<use img/tucn.jpg>
+Package pdftex.def Info: img/tucn.jpg  used on input line 71.
+(pdftex.def)             Requested size: 426.79134pt x 87.17752pt.
+ [4
+
+{C:/Users/Mihai Pitu/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./img/
+tucn.jpg>]
+File: img/tucn.jpg Graphic file (type jpg)
+<use img/tucn.jpg>
+Package pdftex.def Info: img/tucn.jpg  used on input line 97.
+(pdftex.def)             Requested size: 426.79134pt x 87.17752pt.
+
+Overfull \hbox (25.93462pt too wide) in paragraph at lines 105--110
+[][] 
+ []
+
+[5] [6]
+File: img/tucn.jpg Graphic file (type jpg)
+<use img/tucn.jpg>
+Package pdftex.def Info: img/tucn.jpg  used on input line 154.
+(pdftex.def)             Requested size: 426.79134pt x 87.17752pt.
+ [7]
+\openout2 = `guideline.aux'.
+
+ (guideline.tex) [8
+
+] (thesis.toc [9
+
+
+])
+\tf@toc=\write4
+\openout4 = `thesis.toc'.
+
+ [10]
+Chapter 1.
+LaTeX Font Info:    Try loading font information for OMS+aer on input line 226.
+
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ae\omsaer.fd"
+File: omsaer.fd 1999/12/27
+)
+LaTeX Font Info:    Font shape `OMS/aer/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 226.
+<img/test.jpg, id=28, 333.245pt x 220.825pt>
+File: img/test.jpg Graphic file (type jpg)
+<use img/test.jpg>
+Package pdftex.def Info: img/test.jpg  used on input line 264.
+(pdftex.def)             Requested size: 333.24417pt x 220.82445pt.
+ [11
+
+] [12 <./img/test.jpg>]
+Chapter 2.
+[13
+
+]
+Chapter 3.
+[14
+
+]
+Chapter 4.
+[15
+
+]
+Chapter 5.
+[16
+
+]
+Chapter 6.
+[17
+
+]
+Chapter 7.
+[18
+
+]
+Chapter 8.
+(thesis.bbl [19
+
+]) [20
+
+]
+\openout2 = `apendix.aux'.
+
+ (apendix.tex
+Appendix A.
+LaTeX Font Info:    Try loading font information for T1+aett on input line 4.
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ae\t1aett.fd"
+File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
+) [21
+
+
+]
+Appendix B.
+[22
+
+]
+Appendix C.
+) [23
+
+] (thesis.aux (guideline.aux) (apendix.aux)) ) 
+Here is how much of TeX's memory you used:
+ 4337 strings out of 492969
+ 57376 string characters out of 3124363
+ 138124 words of memory out of 3000000
+ 8038 multiletter control sequences out of 15000+200000
+ 42450 words of font info for 97 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 41i,8n,27p,847b,224s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/Mihai Pitu/AppData/Loca
+l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Mihai
+ Pitu/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pf
+b><C:/Users/Mihai Pitu/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmr10.pfb><C:/Users/Mihai Pitu/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Mihai Pitu/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Mihai Pitu/AppDat
+a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/M
+ihai Pitu/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy
+10.pfb><C:/Users/Mihai Pitu/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmti12.pfb><C:/Users/Mihai Pitu/AppData/Local/Programs/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on thesis.pdf (20 pages, 191337 bytes).
+PDF statistics:
+ 105 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+

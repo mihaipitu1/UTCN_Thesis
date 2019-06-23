@@ -1,0 +1,376 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
+%%% File: thesis.tex, version 1.9, May 2014
+%%%
+%%% =============================================
+%%% This file contains a template that can be used with the package
+%%% cs.sty and LaTeX2e to produce a thesis that meets the requirements
+%%% of the Computer Science Department from the Technical University of Cluj-Napoca
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt,a4paper,twoside]{report}         
+\usepackage{cs}              
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage{amsmath,amsbsy}
+\usepackage{amssymb}
+\usepackage[matrix,arrow]{xy}
+\usepackage[T1]{fontenc}
+\usepackage{ae,aecompl}
+%\usepackage{shortcut} %definitii pentru diacritice; 
+\usepackage{amstext}
+\usepackage{graphics}
+\usepackage[T1]{fontenc}
+\usepackage{ae,aecompl}
+\usepackage{algorithm}
+%\usepackage{algorithmic}
+\usepackage{color}
+\usepackage{color}
+
+% \mastersthesis
+\diplomathesis
+% \leftchapter
+\centerchapter
+% \rightchapter
+\singlespace
+% \oneandhalfspace
+% \doublespace
+
+\renewcommand{\thesisauthor}{Firstname LASTNAME}    %% Your name.
+\renewcommand{\thesismonth}{July}     %% Your month of graduation.
+\renewcommand{\thesisyear}{2014}      %% Your year of graduation.
+\renewcommand{\thesistitle}{LICENSE THESIS TITLE} 
+\renewcommand{\thesissupervisor}{scientific title Firstname LASTNAME}
+\newcommand{\department}{\bf FACULTY OF AUTOMATION AND COMPUTER SCIENCE\\
+COMPUTER SCIENCE DEPARTMENT}
+\newcommand{\thesis}{LUCRARE DE LICEN'T'A}
+\newcommand{\utcnlogo}{\includegraphics[width=15cm]{img/tucn.jpg}}
+
+\newcommand{\uline}[1]{\rule[0pt]{#1}{0.4pt}}
+%\renewcommand{\thesisdedication}{P\u{a}rin\c{t}ilor mei}
+
+\begin{document}
+%\frontmatter
+%\pagestyle{headings}
+
+\newenvironment{definition}[1][Defini\c{t}ie.]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+
+
+
+%\thesistitle                    %% Generate the title page.
+%\authordeclarationpage                %% Generate the declaration page.
+
+\pagenumbering{arabic}
+\setcounter{page}{4}
+
+
+
+\begin{center}
+\utcnlogo
+
+\department
+
+\vspace{4cm}
+
+{\bf \thesistitle} %LICENSE THESIS TITLE}
+
+\vspace{1.5cm}
+
+LICENSE THESIS
+
+\vspace{6cm}
+
+Graduate: {\bf Firstname LASTNAME} 
+
+Supervisor: {\bf \thesissupervisor}
+
+\vspace{3cm}
+{\bf \thesisyear}
+\end{center}
+
+\thispagestyle{empty}
+\newpage
+
+\begin{center}
+\utcnlogo
+
+\department
+
+\end{center}
+\vspace{0.5cm}
+
+%\begin{small}
+\begin{tabular}{p{7cm}p{8cm}}
+ %\hspace{-1cm}& APPROVED,\\
+ \hspace{-1cm}DEAN, & DEPARTMENT HEAD,\\
+\hspace{-1cm}{\bf Prof. dr. eng. Liviu MICLEA} & {\bf Prof. dr. eng. Rodica POTOLEA}\\  
+\end{tabular}
+ 
+\vspace{2cm}
+
+\begin{center}
+Graduate: {\bf \thesisauthor}
+
+\vspace{1cm}
+
+{\bf \thesistitle}
+\end{center}
+
+\vspace{1cm}
+
+\begin{enumerate}
+ \item {\bf Project proposal:} {\it Short description of the license thesis and initial data}
+\item {\bf Project contents:} {\it (enumerate the main component parts) Presentation page, advisor's evaluation, title of chapter 1, title of chapter 2, ..., title of chapter n, bibliography, appendices.}
+\item {\bf Place of documentation:} {\it Example}: Technical University of Cluj-Napoca, Computer Science Department
+\item {\bf Consultants:}
+\item {\bf Date of issue of the proposal:} November 1, 2013
+\item {\bf Date of  delivery:} June 28, 2014 {\it (the date when the document is submitted)}
+  \end{enumerate}
+\vspace{1.2cm}
+
+\hspace{6cm} Graduate: \uline{6cm} 
+
+\vspace{0.5cm}
+\hspace{6cm} Supervisor: \uline{6cm} 
+%\end{small}
+
+\thispagestyle{empty}
+
+
+\newpage
+$ $
+%\begin{center}
+%\utcnlogo
+
+%\department
+%\end{center}
+
+\thispagestyle{empty}
+\newpage
+
+\begin{center}
+\utcnlogo
+
+\department
+\end{center}
+
+\vspace{0.5cm}
+
+\begin{center}
+{\bf
+Declara\c{t}ie pe proprie r\u{a}spundere privind\\ 
+autenticitatea lucr\u{a}rii de licen\c{t}\u{a}}
+\end{center}
+\vspace{1cm}
+
+
+
+Subsemnatul(a) \\
+\uline{14.8cm}, 
+legitimat(\u{a}) cu \uline{4cm} seria \uline{3cm} nr. \uline{4cm}\\
+CNP \uline{9cm}, autorul lucr\u{a}rii \uline{2.8cm}\\
+\uline{16cm}\\
+\uline{16cm}\\
+elaborat\u{a} \^{\i}n vederea sus\c{t}inerii examenului de finalizare a studiilor de licen\c{t}\u{a} la Facultatea de Automatic\u{a} \c{s}i Calculatoare, Specializarea \uline{7cm} din cadrul Universit\u{a}\c{t}ii Tehnice din Cluj-Napoca, sesiunea \uline{4cm} a anului universitar \uline{3cm}, declar pe proprie r\u{a}spundere, c\u{a} aceast\u{a} lucrare este rezultatul propriei activit\u{a}\c{t}i intelectuale, pe baza cercet\u{a}rilor mele \c{s}i pe baza informa\c{t}iilor ob\c{t}inute din surse care au fost citate, \^{\i}n textul lucr\u{a}rii \c{s}i \^{\i}n bibliografie.
+
+Declar, c\u{a} aceast\u{a} lucrare nu con\c{t}ine por\c{t}iuni plagiate, iar sursele bibliografice au fost folosite cu 
+respectarea legisla\c{t}iei rom\^{a}ne \c{s}i a conven\c{t}iilor interna\c{t}ionale privind drepturile de autor.
+
+Declar, de asemenea, c\u{a} aceast\u{a} lucrare nu a mai fost prezentat\u{a} \^{\i}n fa\c{t}a unei alte comisii de examen de licen\c{t}\u{a}.
+
+\^{I}n cazul constat\u{a}rii ulterioare a unor declara\c{t}ii false, voi suporta sanc\c{t}iunile administrative, respectiv, \emph{anularea examenului de licen\c{t}\u{a}}.
+
+\vspace{1.5cm}
+
+Data \hspace{8cm} Nume, Prenume
+
+\vspace{0.5cm}
+
+\uline{3cm} \hspace{5cm} \uline{5cm}
+
+\vspace{1cm}
+\hspace{9.4cm}Semn\u{a}tura
+
+\thispagestyle{empty}
+
+\newpage
+
+
+%\listoftables
+%\listoffigures
+
+%\clearpage 
+%\newpage
+
+%\begin{comment}
+\include{guideline} 
+%\end{comment}
+
+\newpage
+
+\tableofcontents
+\newpage
+
+
+
+\chapter{Introduction - Project Context}
+\pagestyle{headings}
+
+The title of each chapter is formatted using Heading 1 style, numbering with one digit (Chapter x. Chapter Name ), font Times New Roman, size 14 points, Bold.
+
+This chapter will present:
+
+\begin{itemize}
+ \item Project context 
+\item Specify the precise domain
+\item Use about 5\% of the paper
+\end{itemize}
+
+
+\section{Project context}
+
+The font used for the text in this document is Times New Roman, size 12 points, as defined in the Normal style, Line spacing equal to 1.0 (Paragraph, Line spacing) and Justify. 
+
+The first line for each paragraph must be indented (implicit in Normal Style), and no additional space is inserted between successive paragraphs\footnote{Sorry for the Word's users. In Latex these are automatically solved.}.
+
+
+\subsection{Subsection}
+Each table used in this document is labeled as Table x.y, where x represents the chapter number, and y shows the table number within the current chapter. Leave a blank line between and after each table, relative to the adjacent paragraphs (table~\ref{table:nonlin}).
+
+\begin{table}[ht]
+\caption{Nonlinear Model Results}
+\centering                          % tabel centrat 
+\begin{tabular}{|c|c|c|c|}          % 4 coloane centrate 
+\hline\hline                        % linie orizontala dubla
+Case & Method\#1 & Method\#2 & Method\#3 \\ [0.5ex]   % inserare tabel
+%heading
+\hline                              % linie orizontal simpla
+1 & 50 & 837 & 970 \\               % corpul tabelului 
+2 & 47 & 877 & 230 \\
+3 & 31 & 25 & 415 \\[1ex]           % [1ex] adds vertical space
+\hline                              
+\end{tabular}
+  % titlul tabelului
+\label{table:nonlin}                % \label{table:nonlin} introduce eticheta folosita pentru referirea tabelului in text; referirea in text se va face cu \ref{table:nonlin}
+\end{table}
+
+Each figure used in the document must be cited within the text (ex: in figure x.y the system components are presented... ) and labeled. The labeling must be as Figure x.y where x represents the chapter number, and y shows the number of the figure within the current chapter. 
+ E.g.: figure \ref{fig:imag}.
+
+\begin{figure}[ht]
+    \centering
+\includegraphics[]{img/test.jpg}
+    \caption{The figure`s name}
+    \label{fig:imag}
+\end{figure}
+
+Each chapter must start on a new page.
+
+\chapter{Project Objectives and Specifications}
+
+
+Describe the proper theme (as a research/design proposal, clearly formulated, with clear objectives, and some explanatory figures).
+
+Stretches over about 10\% of the paper.
+
+\section{Title}
+\section{Other title}
+
+\chapter{Bibliographic research}
+
+
+Bibliographic research has as an objective the establishment of the references for the project, within the project domain/thematic. While writing this chapter (in general the whole document), the author will consider the knowledge accumulated from several dedicated disciplines in the second semester, 4$^{th}$ year (Project Elaboration Methodology, etc.), and other disciplines that are relevant to the project theme.
+
+Represents about 15\% of the paper.
+
+Each reference must be cited within the document text, see example below (depending on the project theme, the presentation of a method/application can vary).
+
+
+This section includes citations for conferences or workshop~\cite{BellucciLZ04}, journals~\cite{AntoniouSBDB07}, 
+and books~\cite{russell1995artificial}. 
+
+In paper~\cite{AntoniouSBDB07} the authors present a detection system for moving obstacles based on stereovision and ego motion estimation. 
+The method is ... {\it discus the algorithms, data structures, functionality, specific aspects related to the project theme, etc.}... Discussion: {\it pros and cons}.
+
+In chapter~\ref{ch:analysis} of~\cite{strunk}, the {\it similar-to-my-project-theme algorithm} is presented, with the following features ...
+
+
+\section{Title}
+\section{Other title}
+
+
+\chapter{Analysis and Theoretical Foundation}
+\label{ch:analysis}
+
+Together with the next chapter takes about 60\% of the whole paper
+
+The purpose of this chapter is to explain the operating principles of the implemented application.
+Here you write about your solution from a theory standpoint - i.e. you explain it and you demonstrate its theoretical properties/value, e.g.:
+\begin{itemize}
+ \item used or proposed algorithms
+ \item used protocols
+ \item abstract models
+ \item logic explanations/arguments concerning the chosen solution
+ \item logic and functional structure of the application, etc.
+\end{itemize}
+
+{\color{red} YOU DO NOT write about implementation.
+
+YOU DO NOT copy/paste info on technologies from various sources and others alike, which do not pertain to your project.
+}
+
+\section{Title}
+\section{Other title}
+
+
+\chapter{Detailed Design and Implementation}
+
+Together with the previous chapter takes about 60\% of the paper.
+
+The purpose of this chapter is to document the developed application such a way that it can be maintained and developed later. A reader should be able (from what you have written here) to identify the main functions of the application.
+
+The chapter should contain (but not limited to):
+\begin{itemize}
+ \item a general application sketch/scheme,
+\item a description of every component implemented, at module level,
+\item class diagrams, important classes and methods from key classes.
+\end{itemize}
+
+\chapter{Testing and Validation}
+
+About 5\% of the paper
+\section{Title}
+\section{Other title}
+
+\chapter{User's manual}
+
+In the installation description section your should detail the hardware and software resources needed for installing and running the application, and a step by step description of how your application can be deployed/installed. An administrator should be able to perform the installation/deployment based on your instructions.
+
+In the user manual section you describe how to use the application from the point of view of a user with no inside technical information; this should be done with screen shots and a stepwize explanation of the interaction. Based on user's manual, a person should be able to use your product.
+
+\section{Title}
+\section{Other title}
+
+\chapter{Conclusions}
+
+About. 5\% of the whole
+
+Here your write:
+\begin{itemize}
+\item a summary of your contributions/achievements,
+\item a critical analysis of the achieved results,
+\item a description of the possibilities of improving/further development.
+\end{itemize}
+\section{Title}
+\section{Other title}
+
+
+%\addcontentsline {toc}{chapter}{Bibliography} 
+\bibliographystyle{IEEEtran} 
+\bibliography{thesis}%same file name as for .bib
+
+\include{apendix}
+
+\end{document}

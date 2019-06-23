@@ -1,0 +1,126 @@
+
+\chapter{Introduction - Project Context}
+\pagestyle{headings}
+
+
+What to write here:
+
+\begin{itemize}
+ \item Project context 
+\item Specify the precise domain
+\item Use about 5\% of the paper
+\end{itemize}
+
+\section{Project context}
+This subchapter should be written using Times New Roman 14 points, bold font. For numbering use Arabic digits, e.g.: $X.Y$ where X is the chapter number, and Y subchapter number. The distance between subchapter title and text body is 8 points.
+
+\subsection{Subsection}
+Distance between and after subchapter title is 8 points. Every table in the paper is numbered as follows: Table x.y, where x is the chapter number, and y is the number of the table within that chapter. Leave a vertical space of 8 points between text and table. (tabel \ref{table:nonlin}).
+\begin{table}[ht]
+\centering                          % tabel centrat 
+\begin{tabular}{|c|c|c|c|}          % 4 coloane centrate 
+\hline\hline                        % linie orizontala dubla
+Case & Method\#1 & Method\#2 & Method\#3 \\ [0.5ex]   % inserare tabel
+%heading
+\hline                              % linie orizontal simpla
+1 & 50 & 837 & 970 \\               % corpul tabelului 
+2 & 47 & 877 & 230 \\
+3 & 31 & 25 & 415 \\[1ex]           % [1ex] adds vertical space
+\hline                              
+\end{tabular}
+\caption{Nonlinear Model Results}   % titlul tabelului
+\label{table:nonlin}                % \label{table:nonlin} introduce eticheta folosita pentru referirea tabelului in text; referirea in text se va face cu \ref{table:nonlin}
+\end{table}
+
+Every figure inserted should be cited (e.g.: Figure x.y illustrates ... ), and numbered. Numbering is as follows: Figure x.y, where x is the chapter number, and y is the number of the figure within that chapter. E.g.: figure \ref{fig:imag}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[]{img/image.eps}
+    \caption{The figure's name}
+    \label{fig:imag}
+\end{figure}
+
+
+Equations:
+\begin{equation}
+    \Delta =\sum_{i=1}^N w_i (x_i - \bar{x})^2 .
+\end{equation}
+
+\subsection{Other examples in \LaTeX}
+\label{subsec:s10} %this is what you need to write when you reffer to this section  
+
+The modus ponens modified: 
+% this is an equation 
+\begin{equation} 
+  \frac{a \land a \rightarrow b}
+       {b}
+\label{eq:e50}
+\end{equation}
+
+Curly bracket: 
+
+\[\left \{ 
+    \begin{array}{l}
+        p =\frac{x}{x+y+z} \\
+        q = \frac{y}{x+y+z}\\ 
+        r = \frac{z}{x+y+z}
+    \end{array}\right.
+\]
+        
+We will speak about bullets: 
+\begin{itemize}
+    \item numer 1 
+    \item number 2
+    \item number 3
+\end{itemize}
+
+Then about numbered items: 
+\begin{enumerate}
+    \item numer one
+    \item number two
+    \item number three
+\end{enumerate}
+                        
+Some authors tell good things \cite{Zhou04} %this is how you cite 
+
+
+
+Table \ref{Mom} tells us about a table: 
+\begin{table}
+    \caption{Multinomial opinion multiplication}
+    \label{Mom}
+        \begin{center}
+            \begin{tabular}{|l|l|l|l|l|l|l|}
+                \hline 
+                & \multicolumn{3}{c|}{belief} & \multicolumn{3}{c|}{atomicity} \\
+                \cline{2-7}
+                & $poor$ & $avg$ & $good$ & $poor$ & $avg$ & $good$ \\ 
+        	\hline
+                $success$   &  0.1    &  0.2    &  0.3    & 0.4    & 0.5    &  0.6     \\
+                $failure$   &  0.1    &  0.2    &  0.3    & 0.4    & 0.5    &  0.6     \\
+                                                    \hline
+	    \end{tabular}
+        \end{center}
+\end{table}
+                                                                                                                                                                                                                                                                  
+
+\begin{algorithm}
+ \caption{Commitment decision}
+  \label{ftalg}
+   \begin{algorithmic}
+     \IF{$Committed(G_{1},GR,\alpha)$} 
+      \STATE $BRT_{\alpha}$ = $PredictBRT(G_{1},GR,\alpha,C_{GR})$
+      \STATE $C_{\beta}$ = $ContextUpdate(C_{\beta},o)$
+      \STATE $BRT_{\beta}$ = $PredictBRT(G_{1},G_{2},\beta,C_{\beta})$
+      \STATE $BRT_{\alpha}^{o}$ = $BRTReplace(BRT_{\alpha},BRT_{\beta})$
+      \STATE $utility$ = $Eval(BRT_{\alpha}^{o})-Eval(BRT_{\alpha})$
+     \ENDIF
+      \IF{$utility \ge CommunicationCost(G_{2})$}
+        \STATE $Int.To(G_{1},Communicate(G_{1},G_{2},o))$
+      \ENDIF
+   \end{algorithmic}
+\end{algorithm}
+                                    
+\section*{Acknowledgments}
+Special thanks to Aristotel for section \ref{subsec:s10} %this is how you refer to a section 
