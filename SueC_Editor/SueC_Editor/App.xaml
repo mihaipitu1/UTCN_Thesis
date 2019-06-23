@@ -1,0 +1,9 @@
+﻿<Application x:Class="SueC_Editor.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:SueC_Editor"
+             StartupUri="Views/SourceFileView.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

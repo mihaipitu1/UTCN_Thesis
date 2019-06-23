@@ -1,0 +1,23 @@
+﻿<Window x:Class="SueC_Editor.Views.SourceFileView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SueC_Editor.Views"
+        mc:Ignorable="d"
+        Title="SourceFileView" Height="450" Width="800">
+    <Grid>
+        <ListView Name="SourceFileGridView" ItemsSource="{Binding SFList}">
+            <ListView.View>
+                <GridView x:Name="Test">
+                    <GridViewColumn Header="Title" DisplayMemberBinding="{Binding Title}"/>
+                    <GridViewColumn Header="URL" DisplayMemberBinding="{Binding LocationURL}"/>
+                    <GridViewColumn Header="Content" DisplayMemberBinding="{Binding Content}"/>
+                </GridView>
+            </ListView.View>
+            <Label Content="{Binding ElementName=SourceFileGridView,Path=SelectedItem.Title}"/>
+            <Label Content="{Binding ElementName=SourceFileGridView,Path=SelectedItem.LocationURL}"/>
+            <Label Content="{Binding ElementName=SourceFileGridView,Path=SelectedItem.Content}"/>
+        </ListView>
+    </Grid>
+</Window>
