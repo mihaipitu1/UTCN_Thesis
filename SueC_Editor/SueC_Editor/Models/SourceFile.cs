@@ -10,58 +10,50 @@ namespace SueC_Editor.Models
     public class SourceFile : INotifyPropertyChanged
     {
         private string title;
-        private string locationURL;
+        private string pathName;
         private string content;
 
         public string Title
         {
-            get
-            {
-                return title;
-            }
+            get => title;
             set
             {
                 title = value;
-                OnPropertyChanged("Title");
+                RaisePropertyChanged("Title");
             }
         }
 
-        public string LocationURL
+        public string PathName
         {
-            get
-            {
-                return locationURL;
-            }
+            get => pathName;
             set
             {
-                locationURL = value;
-                OnPropertyChanged("LocationURL");
+                pathName = value;
+                RaisePropertyChanged("PathName");
             }
         }
 
         public string Content
         {
-            get
-            {
-                return content;
-            }
+            get => content;
             set
             {
                 content = value;
-                OnPropertyChanged("Content");
+                RaisePropertyChanged("Content");
             }
         }
 
-        #region
+        #region "PropertyEvents"
 
         public event PropertyChangedEventHandler PropertyChanged;
-        private void OnPropertyChanged(string propertyName)
+        private void RaisePropertyChanged(string property)
         {
             if (PropertyChanged != null)
             {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+                PropertyChanged(this, new PropertyChangedEventArgs(property));
             }
         }
         #endregion
+
     }
 }

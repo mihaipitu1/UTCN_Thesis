@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace SueC_Editor.Views
@@ -17,7 +18,7 @@ namespace SueC_Editor.Views
     /// <summary>
     /// Interaction logic for SourceFileView.xaml
     /// </summary>
-    public partial class SourceFileView : Window
+    public partial class SourceFileView : UserControl
     {
         public SourceFileView()
         {

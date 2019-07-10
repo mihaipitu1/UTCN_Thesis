@@ -1,5 +1,4 @@
-﻿using SueC_Editor.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -17,7 +16,6 @@ namespace SueC_Editor
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-            SourceFileViewModel VM = new SourceFileViewModel();
         }
     }
 }

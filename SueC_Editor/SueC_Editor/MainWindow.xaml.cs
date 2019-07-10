@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SueC_Editor.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,14 @@ namespace SueC_Editor
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void SourceFileControl_Loaded(object sender,RoutedEventArgs e)
+        {
+            SourceFileViewModel sfVM = new SourceFileViewModel();
+            sfVM.LoadSourceFiles();
+
+            SourceFileControl.DataContext = sfVM;
         }
     }
 }
