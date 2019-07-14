@@ -25,13 +25,5 @@ namespace SueC_Editor
         {
             InitializeComponent();
         }
-
-        private void SourceFileControl_Loaded(object sender,RoutedEventArgs e)
-        {
-            SourceFileViewModel sfVM = new SourceFileViewModel();
-            sfVM.LoadSourceFiles();
-
-            SourceFileControl.DataContext = sfVM;
-        }
     }
 }

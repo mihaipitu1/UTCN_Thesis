@@ -10,6 +10,11 @@ namespace SueC_Editor.ViewModels
 {
     public class SourceFileViewModel
     {
+
+        public SourceFileViewModel()
+        {
+            LoadSourceFiles();
+        }
         public ObservableCollection<SourceFile> SourceFiles
         {
             get;
