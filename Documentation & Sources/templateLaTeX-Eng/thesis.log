@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.12.21)  19 AUG 2019 18:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.12.21)  2 SEP 2019 21:50
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -434,53 +434,53 @@ Package pdftex.def Info: img/tucn.jpg  used on input line 154.
 
  (guideline.tex) [8
 
-] (thesis.toc [9
-
-
-])
+] (thesis.toc)
 \tf@toc=\write4
 \openout4 = `thesis.toc'.
 
- [10]
+ [9
+
+
+]
 Chapter 1.
-[11
+[10
 
 ]
 Chapter 2.
-[12
-
-]
-Chapter 3.
-[13
-
-]
-Chapter 4.
-LaTeX Font Info:    Try loading font information for OMS+aer on input line 268.
+LaTeX Font Info:    Try loading font information for OMS+aer on input line 232.
 
 ("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ae\omsaer.fd"
 File: omsaer.fd 1999/12/27
 )
 LaTeX Font Info:    Font shape `OMS/aer/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 268.
- [14
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 232.
+ [11
+
+]
+Chapter 3.
+[12
+
+]
+Chapter 4.
+[13
 
 ]
 Chapter 5.
-[15
+[14
 
 ]
 Chapter 6.
-[16
+[15
 
 ]
 Chapter 7.
-[17
+[16
 
 ]
 Chapter 8.
-(thesis.bbl [18
+(thesis.bbl [17
 
-]) [19
+]) [18
 
 ]
 \openout2 = `apendix.aux'.
@@ -490,16 +490,16 @@ Appendix A.
 LaTeX Font Info:    Try loading font information for T1+aett on input line 4.
 ("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ae\t1aett.fd"
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
-) [20
+) [19
 
 
 ]
 Appendix B.
-[21
+[20
 
 ]
 Appendix C.
-) [22
+) [21
 
 ] (thesis.aux (guideline.aux) (apendix.aux)) ) 
 Here is how much of TeX's memory you used:
@@ -521,9 +521,9 @@ a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users
 /Mihai Pitu/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
 ti12.pfb><C:/Users/Mihai Pitu/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
 lic/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (19 pages, 161652 bytes).
+Output written on thesis.pdf (18 pages, 161704 bytes).
 PDF statistics:
- 97 PDF objects out of 1000 (max. 8388607)
+ 93 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
