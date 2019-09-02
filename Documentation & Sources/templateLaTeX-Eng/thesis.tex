@@ -27,7 +27,7 @@
 %\usepackage{algorithmic}
 \usepackage{color}
 \usepackage{color}
-
+\usepackage[super]{nth}
 % \mastersthesis
 \diplomathesis
 % \leftchapter
@@ -37,11 +37,11 @@
 % \oneandhalfspace
 % \doublespace
 
-\renewcommand{\thesisauthor}{Firstname LASTNAME}    %% Your name.
-\renewcommand{\thesismonth}{June}     %% Your month of graduation.
+\renewcommand{\thesisauthor}{Mihai PÎȚU}    %% Your name.
+\renewcommand{\thesismonth}{September}     %% Your month of graduation.
 \renewcommand{\thesisyear}{2019}      %% Your year of graduation.
-\renewcommand{\thesistitle}{LICENSE THESIS TITLE} 
-\renewcommand{\thesissupervisor}{scientific title Firstname LASTNAME}
+\renewcommand{\thesistitle}{SueC - An Editor and Interpreter for Pseudocode} 
+\renewcommand{\thesissupervisor}{dr. eng. Emil Ștefan CHIFU}
 \newcommand{\department}{\bf FACULTY OF AUTOMATION AND COMPUTER SCIENCE\\
 COMPUTER SCIENCE DEPARTMENT}
 \newcommand{\thesis}{LUCRARE DE LICEN'T'A}
@@ -82,7 +82,7 @@ LICENSE THESIS
 
 \vspace{6cm}
 
-Graduate: {\bf Firstname LASTNAME} 
+Graduate: {\bf \thesisauthor} 
 
 Supervisor: {\bf \thesissupervisor}
 
@@ -213,60 +213,13 @@ Data \hspace{8cm} Nume, Prenume
 \tableofcontents
 \newpage
 
-
-
 \chapter{Introduction - Project Context}
 \pagestyle{headings}
-
-The title of each chapter is formatted using Heading 1 style, numbering with one digit (Chapter x. Chapter Name ), font Times New Roman, size 14 points, Bold.
-
-This chapter will present:
-
-\begin{itemize}
- \item Project context 
-\item Specify the precise domain
-\item Use about 5\% of the paper
-\end{itemize}
-
-
-\section{Project context}
-
-The font used for the text in this document is Times New Roman, size 12 points, as defined in the Normal style, Line spacing equal to 1.0 (Paragraph, Line spacing) and Justify. 
-
-The first line for each paragraph must be indented (implicit in Normal Style), and no additional space is inserted between successive paragraphs\footnote{Sorry for the Word's users. In Latex these are automatically solved.}.
-
-
-\subsection{Subsection}
-Each table used in this document is labeled as Table x.y, where x represents the chapter number, and y shows the table number within the current chapter. Leave a blank line between and after each table, relative to the adjacent paragraphs (table~\ref{table:nonlin}).
-
-\begin{table}[ht]
-\caption{Nonlinear Model Results}
-\centering                          % tabel centrat 
-\begin{tabular}{|c|c|c|c|}          % 4 coloane centrate 
-\hline\hline                        % linie orizontala dubla
-Case & Method\#1 & Method\#2 & Method\#3 \\ [0.5ex]   % inserare tabel
-%heading
-\hline                              % linie orizontal simpla
-1 & 50 & 837 & 970 \\               % corpul tabelului 
-2 & 47 & 877 & 230 \\
-3 & 31 & 25 & 415 \\[1ex]           % [1ex] adds vertical space
-\hline                              
-\end{tabular}
-  % titlul tabelului
-\label{table:nonlin}                % \label{table:nonlin} introduce eticheta folosita pentru referirea tabelului in text; referirea in text se va face cu \ref{table:nonlin}
-\end{table}
-
-Each figure used in the document must be cited within the text (ex: in figure x.y the system components are presented... ) and labeled. The labeling must be as Figure x.y where x represents the chapter number, and y shows the number of the figure within the current chapter. 
- E.g.: figure \ref{fig:imag}.
-
-\begin{figure}[ht]
-    \centering
-\includegraphics[]{img/test.jpg}
-    \caption{The figure`s name}
-    \label{fig:imag}
-\end{figure}
-
-Each chapter must start on a new page.
+	Computer science and programming is taught in schools around Romania for at least 30 years, especially in high schools, but also in secondary schools, starting with the \nth{5} grade. Before introducing directly to a programming language, many teachers use a pseudocode language which serves as a mean of understanding programming concepts in a more universal manner, bringing it closer to the natural spoken language.
+	
+	The purpose of this project is to create an editor and interpreter of pseudocode language created based on concepts similar to C and Python. This application will serve as an educational tool for 
+ 
+	
 
 \chapter{Project Objectives and Specifications}
 
@@ -275,8 +228,11 @@ Describe the proper theme (as a research/design proposal, clearly formulated, wi
 
 Stretches over about 10\% of the paper.
 
-\section{Title}
-\section{Other title}
+
+	For a technical point of view, the pseudocode will be created like any other programming languages, having similar elements to existing ones that are used nowadays, but also with specific structural elements which the teachers and students use, bringing it closer to the natural language. Each programming language has a parser and compiler with is comprised of a lexical and a syntactic analyzer which interprets the text based on a set of rules and returns the appropriate result.
+
+SueC is the name of the editor which creates, edits and compiles files which represent pseudocode files. This editor will work also like any other editors, providing some error-checking mechanisms and returning the result after compiling a pseudocode file.
+
 
 \chapter{Bibliographic research}
 

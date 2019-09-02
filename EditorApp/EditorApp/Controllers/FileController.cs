@@ -51,15 +51,29 @@ namespace EditorApp.Controllers
             string outputStream = null;
 
             Stream fileStream;
-            using(fileStream = File.OpenRead(fileName))
+            using(fileStream = File.Open(fileName,FileMode.Open))
             {
                 using(StreamReader sr = new StreamReader(fileStream))
                 {
                     outputStream = sr.ReadToEnd();
                 }
             }
-
             return outputStream;
+        }
+
+        public void SaveFile(string fileName, string codeText)
+        {
+            Stream fileStream; 
+
+            using (fileStream = File.Open(fileName,FileMode.Open))
+            {
+                fileStream.SetLength(0);
+                using(StreamWriter sw = new StreamWriter(fileStream))
+                {
+                    sw.Flush();
+                    sw.Write(codeText);
+                }
+            }
         }
     }
 }

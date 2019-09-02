@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.12.21)  14 JUN 2019 21:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.12.21)  19 AUG 2019 18:22
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -299,6 +299,10 @@ color.cfg"
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
+)
+("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\generic\genmisc\nth
+.sty"
+Package: nth 2002/02/27
 ) (thesis.aux (guideline.aux) (apendix.aux))
 \openout1 = `thesis.aux'.
 
@@ -439,49 +443,44 @@ Package pdftex.def Info: img/tucn.jpg  used on input line 154.
 
  [10]
 Chapter 1.
-LaTeX Font Info:    Try loading font information for OMS+aer on input line 226.
+[11
+
+]
+Chapter 2.
+[12
+
+]
+Chapter 3.
+[13
+
+]
+Chapter 4.
+LaTeX Font Info:    Try loading font information for OMS+aer on input line 268.
 
 ("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ae\omsaer.fd"
 File: omsaer.fd 1999/12/27
 )
 LaTeX Font Info:    Font shape `OMS/aer/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 226.
-<img/test.jpg, id=28, 333.245pt x 220.825pt>
-File: img/test.jpg Graphic file (type jpg)
-<use img/test.jpg>
-Package pdftex.def Info: img/test.jpg  used on input line 264.
-(pdftex.def)             Requested size: 333.24417pt x 220.82445pt.
- [11
-
-] [12 <./img/test.jpg>]
-Chapter 2.
-[13
-
-]
-Chapter 3.
-[14
-
-]
-Chapter 4.
-[15
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 268.
+ [14
 
 ]
 Chapter 5.
-[16
+[15
 
 ]
 Chapter 6.
-[17
+[16
 
 ]
 Chapter 7.
-[18
+[17
 
 ]
 Chapter 8.
-(thesis.bbl [19
+(thesis.bbl [18
 
-]) [20
+]) [19
 
 ]
 \openout2 = `apendix.aux'.
@@ -491,41 +490,40 @@ Appendix A.
 LaTeX Font Info:    Try loading font information for T1+aett on input line 4.
 ("C:\Users\Mihai Pitu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ae\t1aett.fd"
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
-) [21
+) [20
 
 
 ]
 Appendix B.
-[22
+[21
 
 ]
 Appendix C.
-) [23
+) [22
 
 ] (thesis.aux (guideline.aux) (apendix.aux)) ) 
 Here is how much of TeX's memory you used:
- 4337 strings out of 492969
- 57376 string characters out of 3124363
- 138124 words of memory out of 3000000
- 8038 multiletter control sequences out of 15000+200000
- 42450 words of font info for 97 fonts, out of 3000000 for 9000
+ 4320 strings out of 492969
+ 57676 string characters out of 3124363
+ 138255 words of memory out of 3000000
+ 8028 multiletter control sequences out of 15000+200000
+ 33103 words of font info for 78 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,8n,27p,847b,224s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,8n,27p,847b,174s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Mihai Pitu/AppData/Loca
 l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Mihai
- Pitu/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pf
+ Pitu/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx6.pf
 b><C:/Users/Mihai Pitu/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmr10.pfb><C:/Users/Mihai Pitu/AppData/Local/Programs/MiKTeX 2.9/fonts
+fonts/cm/cmmi8.pfb><C:/Users/Mihai Pitu/AppData/Local/Programs/MiKTeX 2.9/fonts
 /type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Mihai Pitu/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Mihai Pitu/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/M
-ihai Pitu/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy
-10.pfb><C:/Users/Mihai Pitu/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmti12.pfb><C:/Users/Mihai Pitu/AppData/Local/Programs/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (20 pages, 191337 bytes).
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Mihai Pitu/AppDat
+a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users
+/Mihai Pitu/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+ti12.pfb><C:/Users/Mihai Pitu/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmtt12.pfb>
+Output written on thesis.pdf (19 pages, 161652 bytes).
 PDF statistics:
- 105 PDF objects out of 1000 (max. 8388607)
+ 97 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

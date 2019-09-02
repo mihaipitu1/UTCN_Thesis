@@ -42,5 +42,15 @@ namespace EditorApp.Views
             flView.Show();
             this.Hide();
         }
+
+        private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string fileName = this.Text;
+            string codeText = this.codeTextBox.Text;
+
+            Console.WriteLine("This is the codeText: \n\n" + codeText + "\n\n");
+
+            fileController.SaveFile(fileName, codeText);
+        }
     }
 }
