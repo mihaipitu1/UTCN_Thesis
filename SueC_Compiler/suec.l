@@ -37,9 +37,9 @@
 				}
 
 //operators
-[-()+*/<>=;]	 {return *yytext;}
+[-()+*/<>;]	 {return *yytext;}
 
-":="		 {return ATTR;}
+"="		 {return ATTR;}
 ">="		return GE;
 "<="		return LE;
 "=="		return EQ;
