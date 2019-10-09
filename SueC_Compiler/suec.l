@@ -3,10 +3,12 @@
 %}
 
 %%
-//main keywords
 
+//type definition
 "int"  {return INT;}
 "string" {return STRING;}
+
+//main operations
 "if"   {return IF;}
 "else" {return ELSE;}
 "for"  {return FOR;}
@@ -14,6 +16,8 @@
 "read"  {return READ;}
 "write" {return WRITE;}
 
+
+//variables
 [A-Z]	{
 		yylval.variable = *yytext - 'A';
 		return VAR;
@@ -45,9 +49,9 @@
 "=="		return EQ;
 "!="		return NE;
 
-[ \t\r\n]	;
+[ \t\r\n]+	;
 
-.			yyerror("Unkwpn character");
+.			yyerror("Unknown character");
 
 %%
 int yywrap(void)
