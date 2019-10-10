@@ -15,7 +15,8 @@ int variables[26];
 %token READ WRITE
 
 %token <iValue> NUM
-%token <variable> VAR
+%token <hcvariable> HCVAR
+%token <lcvariable> LCVAR
 %token <word> WORD
 
 %left GE LE EQ NE '>' '<'
@@ -43,12 +44,18 @@ statementlist : statement
 
 simplestatement : expression
                 | WRITE expression		{ $$ = node(WRITE,$2,NNULL); }
-				| VAR '=' expression	{ $$ = node('=', $1, $3); }
+				| variable '=' expression	{ $$ = node('=', $1, $3); }
+				| READ variable 		{ $$ = node(READ,$2,NNULL); }
 				;
+				
+variable : HCVAR { $$ = iden($1); }
+		| LCVAR  { $$ = iden($1); }
+		;
 
 expression : NUM			{ $$ = leaf(NUM, $1); }
-	   | INT VAR			{ $$ = leaf(INT, VAR); }
-	   | STRING VAR			{ $$ = leaf(STRING, VAR); }
+	   | WORD 				{ $$ = leaf(WORD,$1); }
+	   | INT variable			{ $$ = leaf(INT, $2); }
+	   | STRING variable			{ $$ = leaf(STRING, $2); }
 	   | expression '+' expression	{ $$ = node('+', $1, $3); }
 	   | expression '-' expression	{ $$ = node('-', $1, $3); }
 	   | expression '*' expression	{ $$ = node('*', $1, $3); }

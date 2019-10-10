@@ -20,12 +20,12 @@
 //variables
 [A-Z]	{
 		yylval.variable = *yytext - 'A';
-		return VAR;
+		return HCVAR;
 	}
 
 [a-z]	{
 		yylval.variable = *yytext - 'a';
-		return VAR;
+		return LCVAR;
 	}
 
 //numbers and strings
