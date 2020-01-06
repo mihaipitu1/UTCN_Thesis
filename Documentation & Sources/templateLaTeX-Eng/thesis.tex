@@ -215,22 +215,41 @@ Data \hspace{8cm} Nume, Prenume
 
 \chapter{Introduction - Project Context}
 \pagestyle{headings}
-	Computer science and programming is taught in schools around Romania for at least 30 years, especially in high schools, but also in secondary schools, starting with the \nth{5} grade. Before introducing directly to a programming language, many teachers use a pseudocode language which serves as a mean of understanding programming concepts in a more universal manner, bringing it closer to the natural spoken language.
-	
-	Nowadays, in Romanian schools, teachers use C or Pascal programming languages and software related to these in order to develop the students' ideas regarding computer science and programming basics and paradigms.
+\section{Project Context}
+
+	Computer science and programming is taught in schools around Romania for at least 30 years, especially in high schools, but also in secondary schools, starting with the \nth{5} grade. Before introducing directly to a programming language, many teachers use a pseudocode language which serves as a mean of understanding programming concepts in a more universal manner, bringing it closer to the natural spoken language. I have decided to make an implementation of this pseudocode by creating an editor and interpreter for it.
 	
 	The purpose of this project is to create an easier way of learning programming concepts for students who are new into this domain. This will serve as a fresh renewal of software used in schools today, as older tools such as Code::Blocks and/or Free Pascal are still used in schools and programming contests.
  
 	SueC is the name of the editor which creates, edits and compiles files which represent pseudocode files. This editor will work also like any other editors, providing some error-checking mechanisms and returning the result after compiling a pseudocode file.
+	
+\section{Motivation}
+	During high school, many of my colleagues have struggled learning programming and computer science as they had issues in understanding the simple paradigms because of C programming language. They have improved throughout the high school due to the teacher using pseudocode as a mean of explaining simple algorithms and paradigms, but there were some struggle shown for some when changing the pseudocode into implementations in C. 
+	
+	Nowadays, this issue is still persistent in schools in Romania as C and Pascal are used as main programming languages for teaching, exams and computer science contests. There are some more interactive programming languages such as Scratch which uses a graphical interface for implementing simple programs, but since the target audience is for primary school students, there is a need for an attractive way of making secondary and high school students for understanding programming at their age group. 
+	
+	At the moment, there are platforms for learning code such as CodeCademy and Udemy which contain basic courses for people at every age, but the main focus is for people who have a little background in programming and computer science.
+	
+	
 
 \chapter{Project Objectives and Specifications}
 
 
 As the title of the project suggests - "An Editor and Interpreter for Pseudocode" - this is an application which will serve as an educational tool for using the pseudocode as a programming language.
+
+For the users of this application(students and/or teachers), the main functionalities of this application are:
+\begin{itemize}
+	\item Creating/opened a file in which pseudocode can be implemented.
+	\item Writing pseudocode in the file created/opened.
+	\item Compiling the file and obtaining the desired result or error(s) if there are occured.
+	\item Running some step-by-step basic tutorials which are aimed for learning the language.
+\end{itemize}
+
+
 The main objectives of this project are:
 \begin{itemize}
 	\item Developing an user-friendly application which handles the main file handling operations and communicating with the compiler of the pseudocode source files.
-	\item Creating an understandable programming languagethat resembles the pseudocode used by teachers in schools and/or universities. For a technical point of view, the pseudocode will be created like any other programming languages, having similar elements to existing ones that are used nowadays, but also with specific structural elements bringing it closer to the natural language.
+	\item Creating an understandable programming language that resembles the pseudocode used by teachers in schools and/or universities. For a technical point of view, the pseudocode will be created like any other programming languages, having similar elements to existing ones that are used nowadays, but also with specific structural elements bringing it closer to the natural language.
 	\item Developing a compiler for this programming language by defining a lexical and syntactic analyzer respectively. These analyzers contain the set of rules that apply to the programming language. 
 \end{itemize}
 
@@ -240,22 +259,46 @@ The main objectives of this project are:
 
 \chapter{Bibliographic research}
 
-For this project, my research done was focused on the main components and technologies included in the project
+For this project, my research done was focused on the main components and technologies included in the project:
 \begin{enumerate}\bfseries
-	\item Lexical Analyzer
-	\item Syntactic Analyzer
 	\item C Programming Language
 	\item Python Programming Language
+	\item Lex
+	\item Yacc
 \end{enumerate}
-
-\section{Lexical Analyzer}
-A lexical analyzer is an analyzer which processes the source code, being the first step for compiling. It takes the modified source code from language preprocessors 
-\section{Syntactic Analyzer}
-
+ 
 \section{C Programming Language}
+ C is a general-purpose, procedural computer programming language supporting structured programming, lexical variable scope, and recursion, while a static type system prevents unintended operations. This programming language was created between 1972 and 1973 as a way of making utilities work in Unix operating system, later being used for reimplementing the kernel of this OS. Since 1980s, C has gained enough popularity becoming one of the most widely used programming languages in the world. During this time, there were several C compilers created by several vendors for being available for the majority of existing computer architectures and operating systems. Since 1989, C has been standardized by ANSI (American National Standards Institute) and by the International Organization for Standardization (ISO). 
+  
+ Being an imperative procedural language, C was designed to be compiled using a relatively straightforward compiler to provide low-level access to memory and language constructs that map efficiently to machine code instructios all with minimal runtime support. This language supports cross-platform programming, making it available in numerous platforms, from embedded microcontrollers and supercomputers. It also stood as a big influence in the creation of other programming languages, such as:
+ \begin{itemize}
+ 	\item C++
+ 	\item C\#
+ 	\item Java
+ 	\item Python
+ 	\item Go
+ \end{itemize}
+
+ The C programming language syntax is defined by a formal grammar, having specific keywords and rules based on statements to specify different actions. The most common statement is an expression statement, consisting of an expression to be evaluated followed by a semicolon. The main structure of a C program consists of declarations and function definitions, which in turn contain declarations and statements. 
+ 
+ Besides exxpressions, the main sequence execution of statements can contain several control-flow statements defined by reserved keywords:
+  
+ \begin{itemize}
+ 	\item Conditional execution 
+ 	
+ 		This is defined by \textit{if} and \textit{else} statements. These statements contain an expression that the \textit{if} checks if it is true or not and execute statements based on a condition.
+ 		
+ 		Alongside those statements, there exists the \textit{switch} statement in which it displays a \textit{case} based on the expression given.
+ 		
+ 	\item Iterative execution (Looping)
+ 	
+ 		This is defined by \textit{while} , \textit{do-while} and \textit{for} statements which can loop through a certain set. The \textit{for} statement contains separate expressions for initialization, testing and reinitialization, any of which can be omitted. 
+ \end{itemize}
+
 
 \section{Python Programming Language}
 
+Python is an interpreted, high-level, general-purpose programming language with the aim to help programmers with clear, logical code for small and large-scale projects. This programming language is dynamically tpyed and garbage-collected, supporting multiple programming paradigms, such as: procedural, object-oriented and functional.
 
 \chapter{Analysis and Theoretical Foundation}
 \label{ch:analysis}
