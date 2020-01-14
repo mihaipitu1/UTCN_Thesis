@@ -5,20 +5,20 @@
 \contentsline {chapter}{Chapter{} \numberline {3}Bibliographic research}{14}
 \contentsline {section}{\numberline {3.1}C Programming Language}{14}
 \contentsline {section}{\numberline {3.2}Python Programming Language}{15}
-\contentsline {chapter}{Chapter{} \numberline {4}Analysis and Theoretical Foundation}{16}
-\contentsline {section}{\numberline {4.1}Title}{16}
-\contentsline {section}{\numberline {4.2}Other title}{16}
-\contentsline {chapter}{Chapter{} \numberline {5}Detailed Design and Implementation}{17}
-\contentsline {chapter}{Chapter{} \numberline {6}Testing and Validation}{18}
-\contentsline {section}{\numberline {6.1}Title}{18}
-\contentsline {section}{\numberline {6.2}Other title}{18}
-\contentsline {chapter}{Chapter{} \numberline {7}User's manual}{19}
-\contentsline {section}{\numberline {7.1}Title}{19}
-\contentsline {section}{\numberline {7.2}Other title}{19}
-\contentsline {chapter}{Chapter{} \numberline {8}Conclusions}{20}
-\contentsline {section}{\numberline {8.1}Title}{20}
-\contentsline {section}{\numberline {8.2}Other title}{20}
-\contentsline {chapter}{Bibliography}{21}
-\contentsline {chapter}{Appendix{} \numberline {A}Relevant code}{22}
-\contentsline {chapter}{Appendix{} \numberline {B}Other relevant information (demonstrations, etc.)}{23}
-\contentsline {chapter}{Appendix{} \numberline {C}Published papers}{24}
+\contentsline {chapter}{Chapter{} \numberline {4}Analysis and Theoretical Foundation}{17}
+\contentsline {section}{\numberline {4.1}Title}{17}
+\contentsline {section}{\numberline {4.2}Other title}{17}
+\contentsline {chapter}{Chapter{} \numberline {5}Detailed Design and Implementation}{18}
+\contentsline {chapter}{Chapter{} \numberline {6}Testing and Validation}{19}
+\contentsline {section}{\numberline {6.1}Title}{19}
+\contentsline {section}{\numberline {6.2}Other title}{19}
+\contentsline {chapter}{Chapter{} \numberline {7}User's manual}{20}
+\contentsline {section}{\numberline {7.1}Title}{20}
+\contentsline {section}{\numberline {7.2}Other title}{20}
+\contentsline {chapter}{Chapter{} \numberline {8}Conclusions}{21}
+\contentsline {section}{\numberline {8.1}Title}{21}
+\contentsline {section}{\numberline {8.2}Other title}{21}
+\contentsline {chapter}{Bibliography}{22}
+\contentsline {chapter}{Appendix{} \numberline {A}Relevant code}{23}
+\contentsline {chapter}{Appendix{} \numberline {B}Other relevant information (demonstrations, etc.)}{24}
+\contentsline {chapter}{Appendix{} \numberline {C}Published papers}{25}
