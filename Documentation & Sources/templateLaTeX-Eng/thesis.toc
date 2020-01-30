@@ -5,20 +5,26 @@
 \contentsline {chapter}{Chapter{} \numberline {3}Bibliographic research}{14}
 \contentsline {section}{\numberline {3.1}C Programming Language}{14}
 \contentsline {section}{\numberline {3.2}Python Programming Language}{15}
-\contentsline {chapter}{Chapter{} \numberline {4}Analysis and Theoretical Foundation}{17}
-\contentsline {section}{\numberline {4.1}Title}{17}
-\contentsline {section}{\numberline {4.2}Other title}{17}
-\contentsline {chapter}{Chapter{} \numberline {5}Detailed Design and Implementation}{18}
-\contentsline {chapter}{Chapter{} \numberline {6}Testing and Validation}{19}
-\contentsline {section}{\numberline {6.1}Title}{19}
-\contentsline {section}{\numberline {6.2}Other title}{19}
-\contentsline {chapter}{Chapter{} \numberline {7}User's manual}{20}
-\contentsline {section}{\numberline {7.1}Title}{20}
-\contentsline {section}{\numberline {7.2}Other title}{20}
-\contentsline {chapter}{Chapter{} \numberline {8}Conclusions}{21}
-\contentsline {section}{\numberline {8.1}Title}{21}
-\contentsline {section}{\numberline {8.2}Other title}{21}
-\contentsline {chapter}{Bibliography}{22}
-\contentsline {chapter}{Appendix{} \numberline {A}Relevant code}{23}
-\contentsline {chapter}{Appendix{} \numberline {B}Other relevant information (demonstrations, etc.)}{24}
-\contentsline {chapter}{Appendix{} \numberline {C}Published papers}{25}
+\contentsline {section}{\numberline {3.3}Technologies used}{16}
+\contentsline {subsection}{\numberline {3.3.1}Lex}{16}
+\contentsline {subsection}{\numberline {3.3.2}Yacc}{16}
+\contentsline {subsection}{\numberline {3.3.3}.NET Framework}{16}
+\contentsline {subsection}{\numberline {3.3.4}Windows Forms}{17}
+\contentsline {chapter}{Chapter{} \numberline {4}Analysis and Theoretical Foundation}{18}
+\contentsline {section}{\numberline {4.1}Editor Application}{18}
+\contentsline {subsection}{\numberline {4.1.1}Model-View-Controller(MVC) Architecture}{18}
+\contentsline {section}{\numberline {4.2}SueC Interpreter}{20}
+\contentsline {chapter}{Chapter{} \numberline {5}Detailed Design and Implementation}{21}
+\contentsline {chapter}{Chapter{} \numberline {6}Testing and Validation}{22}
+\contentsline {section}{\numberline {6.1}Title}{22}
+\contentsline {section}{\numberline {6.2}Other title}{22}
+\contentsline {chapter}{Chapter{} \numberline {7}User's manual}{23}
+\contentsline {section}{\numberline {7.1}Title}{23}
+\contentsline {section}{\numberline {7.2}Other title}{23}
+\contentsline {chapter}{Chapter{} \numberline {8}Conclusions}{24}
+\contentsline {section}{\numberline {8.1}Title}{24}
+\contentsline {section}{\numberline {8.2}Other title}{24}
+\contentsline {chapter}{Bibliography}{25}
+\contentsline {chapter}{Appendix{} \numberline {A}Relevant code}{26}
+\contentsline {chapter}{Appendix{} \numberline {B}Other relevant information (demonstrations, etc.)}{27}
+\contentsline {chapter}{Appendix{} \numberline {C}Published papers}{28}

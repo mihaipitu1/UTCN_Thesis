@@ -302,31 +302,93 @@ Python is an interpreted, high-level, general-purpose programming language with 
 
 Due to supporting multiple programming paradigms, Python is used in a lot of domains. Object-oriented programming and structured programming are fully supported, but it also includes features from functional programming and aspect-oriented programming. Other paradigms can be supported by Python via extensions, including even logic programming and design by contract. 
 
-Python is meant to be an easily readable language due to its syntax and semantics. The format is visually uncluttered, using English keywords more often than punctuation. Curly brackets are not used to delimit blocks and semicolons are optional. For block delimitation, whitespace indentation is used. A decrease in indentation shows that the current block of code is finished. With this method, it is shown that the program's visual structure accurately represents the program's semantic structure.
+Python is meant to be an easily readable language due to its syntax and semantics. The format is visually uncluttered, using English keywords more often than punctuation. Curly brackets are not used to delimit blocks and semicolons are optional. For block delimitation, whitespace indentation is used. A decrease in indentation shows that the current block of code is finished. With this method, it is shown that the program's visual structure accurately represents the program's semantic structure. 
+
+\section{Technologies used}
+
+\subsection{Lex}
+
+Lex/Flex is a computer program designed for generating lexical analyzers. It is the standard lexical analyzer generator on many Unix systems, having an equivalent tool as part of the POSIX standard. It is commonly used with \textit{yacc} parser generator.
+
+Lex reads an input stream specifying the lexical analyzer and outputs source code implementing a lexer in C. Older versions of Lex could also generate lexers in Ratfor. 
+
+\subsection{Yacc}
+
+Yacc\textit{(Yet Another Compiler-Compiler)} is a computer program for the Unix operating system. It is a LALR\textit{(Look Ahead Left-to-Right)} parser generator, which generates a parser, the part of a compiler that tries to make syntactic sense of the source code. 
+
+\subsection{.NET Framework}
+
+.NET Framework is a software development framework created by Microsoft and used for creating, compiling and distributing Windows and Web applications. It includes several technologies, such as ASP, LINQ, SQL, WPF, UWP that can be implemented in different programming languages, mainly: C\#, C++, F\#, Visual Basic, showing that there are implementations for objected oriented and functional programming. Besides the technologies, .NET framework holds a set of APIs and a runtime environment similar with Java Virtual Machine (JVM), called Common Language Runtime(CTR). 
+
+All the programming languages included in the framework respect the OOP rules via the introduction of a Common Type System (CTS) which defines all possible data types and programming constructs supported by CTR and how they may or may not interact according to Common Language Infrastructure (CLI) specification. These rules include: the creation of classes, interfaces, references, data types, SOLID principles, exception handling etc. 
+
+\subsection{Windows Forms}
+Windows Forms represents the graphical interface API included in .NET framework. A Form in .NET is represented in Windows applications as a window.
+
+A Form is an object which show properties that define the graphical interface and methods of responding to the events of user interface. By creating code for handling the events and setting the properties, objects are created based on the requirements needed for the application. One form contains a title bar, navigation bars, a menu, toolbars and a client zone for defining the event operations.
 
 \chapter{Analysis and Theoretical Foundation}
-\label{ch:analysis}
+\section{Editor Application}
+\subsection{Model-View-Controller(MVC) Architecture}
 
-Together with the next chapter takes about 60\% of the whole paper
+Model-View-Controller (MVC) is a software design pattern commonly used for developing user interfaces which divides the related program logic into three interconnected elements. It is used mainly for designing the layout of a page (Desktop or Web). Although it has been traditionally used for desktop applications, this pattern has become popular in designing web applications. There are specified MVC frameworks for web and mobile application development in popular programming languages like: Java, C\#, Swift, Python, Ruby, JavaScript and PHP.
 
-The purpose of this chapter is to explain the operating principles of the implemented application.
-Here you write about your solution from a theory standpoint - i.e. you explain it and you demonstrate its theoretical properties/value, e.g.:
+
+The main components of this design pattern are:
+
 \begin{itemize}
- \item used or proposed algorithms
- \item used protocols
- \item abstract models
- \item logic explanations/arguments concerning the chosen solution
- \item logic and functional structure of the application, etc.
+\item \textbf{Model}
+		
+It represents the central component of the pattern, being the application's dynamic data structure, independent of the user interface. It directly manages the data, logic and rules of the application.
+
+\item \textbf{View}
+
+It represents the visual element of the pattern, being any representation of information possible, like: charts, tables, diagrams, pages, forms etc. 
+
+\item \textbf{Controller}
+
+Accepts input from the view and converts the data obtained into commands that are directed to the model and/or view.
 \end{itemize}
 
-{\color{red} YOU DO NOT write about implementation.
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.2]{img/MVCDiag.png}
+	\caption{Model-View-Controller Diagram}
+\end{figure}
 
-YOU DO NOT copy/paste info on technologies from various sources and others alike, which do not pertain to your project.
-}
+Besides the division of the application into these components, this pattern defines the interactions between the components:
 
-\section{Title}
-\section{Other title}
+\begin{itemize}
+	\item The model of the application is responsible for managing the data of the application. The user input is received from the controller.
+	\item The view represents a presentation of the model having a particular format.
+	\item The controller responds to the user input given in the view(s) and performs interactions on the data model objects.
+\end{itemize}
 
+Model-View-Controller pattern offers different advantages in regards to developing applications, such as:
+\begin{itemize}
+	\item \textbf{Simultaneous development over the code} 
+	
+	Multiple developers can work simultaneously on the model, controller and views, having no change in the actual structure of the system.
+	\item \textbf{High cohesion}
+			
+	The cohesion is defined in computer programming as the degree to which the elements inside a module belong together. In other terms, it acts as a measure of the strength of relationship between the methods and data of one class and some unifying purpose or concept served by the class.
+	
+	In object-oriented programming, the term "cohesion" is used quite frequently together with coupling. The methods that serve in a class tend to be similar in many aspects, then that class is said to have high cohesion. A highly cohesive system has a manageable complexity, due to the increase of code readability and reusability. 
+	
+	This pattern presents this characteristic by having logical groupings of related actions in one controller altogether. Also, multiple views that are associated to a model can be grouped together. 
+	
+	\item \textbf{Loose coupling}
+	
+	Besides the cohesion, which serves the degree of "togetherness" of elements inside a module, the coupling is described as the degree of independence between software modules i.e. the strength of the relationships between modules between a system.
+	
+	A loosely coupled system is one which each of its components makes use of little or no knowledge of the definitions of other separated components. The main subareas include the coupling of classes, interfaces, data and services. Loose coupling goes hand-in-hand with high cohesion by having an manageable complexity and the ease of use of alternative implementations that provide the same services. 
+	
+	In the case of Model-View-Controller pattern, its nature and workflow shows the existence of a loose coupling between the Model, View and Controller of the application.	
+
+\end{itemize} 
+
+	
+\section{SueC Interpreter}
 
 \chapter{Detailed Design and Implementation}
 
