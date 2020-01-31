@@ -13,7 +13,7 @@
 \contentsline {chapter}{Chapter{} \numberline {4}Analysis and Theoretical Foundation}{18}
 \contentsline {section}{\numberline {4.1}Editor Application}{18}
 \contentsline {subsection}{\numberline {4.1.1}Model-View-Controller(MVC) Architecture}{18}
-\contentsline {section}{\numberline {4.2}SueC Interpreter}{20}
+\contentsline {section}{\numberline {4.2}Interpreter}{20}
 \contentsline {chapter}{Chapter{} \numberline {5}Detailed Design and Implementation}{21}
 \contentsline {chapter}{Chapter{} \numberline {6}Testing and Validation}{22}
 \contentsline {section}{\numberline {6.1}Title}{22}
