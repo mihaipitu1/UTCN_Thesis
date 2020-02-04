@@ -393,12 +393,72 @@ Model-View-Controller pattern offers different advantages in regards to developi
 An interpreter is a computer program that directly executes instructions written in a programming or scripting language, without requiring them to have been compiled into a machine code language program. For program execution, an interpreter uses one of these strategies:
 
 \begin{itemize}
-	\item Parsing the source code and performing its behavior directly
-	\item Translating the source code into efficient intermediate representation and immediately execute this
-	\item Explicitly execute stored precompiled code made by a compiler which is part of the interpreter system
+	\item Parsing the source code and performing its behavior directly;
+	\item Translating the source code into efficient intermediate representation and immediately execute this;
+	\item Explicitly execute stored precompiled code made by a compiler which is part of the interpreter system.
 \end{itemize}
 
+Historically speaking, interpreters have been used since 1952 to ease programming within the limitations of computers existing at that time. Another usage of them was to translate between low-level machine languages, allowing code to be written for machines that were still under development and tested on computers that already existed. The first interpreted high-level language was Lisp. Nowadays, programs written in a high-level language are either directly executed by some kind of interpreter or converted into machine code by a compiler for the CPU to execute.
 
+There are some differences between a compiler and interpreter, mainly in the functionality. A compiler works most of the time with an assembler and linker. It produces machine code most of the time to be executed by the computer hardware, but it can often produce object code, an intermediate form. An object code is the same machine code created before, but with the addition of a symbol table containing names and tags to make executable blocks (or modules) identifiable and relocatable. The linker comes into working by combining these object file(s) with libraries that are included in the compiler in order to create a single executable file. On the other hand, a interpreter written in a low-level language may have similar machine code blocks implementing functions of the high level language stored and executed when a function's entry in a look up table points to that code. However, an interpreter written in a high level language uses another approach, such as: generating and walking a parse tree, generating and executing intermediate software-defined instructions or both approaches.
+
+Both compilers and interpreters generally turn source code into tokens, generate a parse tree. The basic difference is that a compiler system (along with a linker) generates a stand-alone machine code program, whereas an interpreter system performs the actions described by the high level program.
+
+For this project, this interpreter is written in C, a high level language, being split into three parts:
+\subsection{Lexical Analyzer}
+	
+	Lexical analysis (or tokenization) is the process of converting a sequence of characters into a sequence of tokens. A program that performs lexical analysis is called a lexer or tokenizer.
+	
+	In modern processing, a lexer forms the first phase of a compiler frontend, occuring mostly in one pass of the source code. A lexer is used alongside with a parser in most compilers and interpreters. It splits the source code, sentence by sentence, into tokens. Tokens are strings with an assigned meaning, being structured as a pair consisting of a token name and an optional token value. The token names can generally be split into:
+	
+	\begin{itemize}
+		\item \textit{Identifiers} - Names that a programmer/developer chooses.
+		\item \textit{Keywords} - Names that are already defined in the programming language
+		\item \textit{Separators/Punctuators} - Punctuation characters and paired-delimiters
+		\item \textit{Operators} - Symbols that operate on arguments and produce results
+		\item \textit{Literals} - Numeric, logical, textual, reference literals
+		\item \textit{Comments} - Line, block comments 
+	\end{itemize}
+	
+	When a statement is given as a source, the lexer splits every element of the statement, creating one token per element. For example, we consider a C expression: 
+	
+	\textit{c = a * (b + 5);}
+	
+	The lexer gets this statement, passes through its all defined lexems (the source program that matches the pattern for a token) and creates the token based on their lexem appartenance. In this case, the statement becomes:
+	\begin{itemize}
+			
+	\item (identifier, c)
+	\item (operator,=)
+	\item (identifier,a)
+	\item (operator,*)
+	\item (separator,()
+	\item (identifier,b)
+	\item (operator,+)
+	\item (literal,5)
+	\item (separator,))
+	\item (separator,;)
+	\end{itemize}
+
+	The tokens obtained are, then, passed to the parser.
+	
+\subsection{Syntactic Analyzer}
+	Syntactic analysis (or parsing) is the process of analyzing a string of symbols, either in natural language, computer languages or data structures, conforming to the rules of a formal grammar. In computer science, a parser is a software component that takes input data and builds a data structure - often a parse tree, abstract syntax tree or other hierarchical structure, giving a structural representation of the input while checking for correct syntax. In most cases, a lexer works hand-in-hand with a parser.
+	
+	After obtaining the tokens from the lexer, each token is analyzed based on its token name and creates a parse tree which is needed for passing through in order to get an order of operation handling, giving the response. 
+	%\ Aci bag exemplul cu diagrama pe care o folosesc si la parse tree si explic de frunze ca-s identificatori/literali
+\subsection{Parse Tree}
+ 	
+ 	The parse tree is the result of parsing the tokens from the lexer. Passing the tree determines the order of the operations done, giving the results. There are two ways of performing the pass of the tree:
+ 	
+ 	\begin{itemize}
+ 		\item \textbf{Top-down parsing}
+ 		
+ 		This method can be viewed as an attempt to find the left-most derivations of an input stream by searching for parse trees using a top-down expansion of the given formal grammar rules. Tokens are consumed from left to right.
+ 		
+ 		\item \textbf{Bottom-up parsing}
+ 		
+ 		A parser can start with the input and attempt to rewrite it to the start symbol. In this case, the input is represented by the leaves of the parse tree, being the most basic elements. The best example of this case are the LR(Left-to-right Rightmost) parsers, which analyze deterministic context-free languages in linear time.
+ 	\end{itemize}
 
 \chapter{Detailed Design and Implementation}
 
