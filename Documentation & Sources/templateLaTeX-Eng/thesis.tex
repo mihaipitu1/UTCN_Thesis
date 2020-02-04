@@ -462,16 +462,28 @@ For this project, this interpreter is written in C, a high level language, being
 
 \chapter{Detailed Design and Implementation}
 
-Together with the previous chapter takes about 60\% of the paper.
-
-The purpose of this chapter is to document the developed application such a way that it can be maintained and developed later. A reader should be able (from what you have written here) to identify the main functions of the application.
-
-The chapter should contain (but not limited to):
+\section{Project Component Diagram}
+%\Block Diagram of the application TBA
+This project is split into two main components:
 \begin{itemize}
- \item a general application sketch/scheme,
-\item a description of every component implemented, at module level,
-\item class diagrams, important classes and methods from key classes.
+	\item Editor Application
+	\item SueC Interpreter
 \end{itemize}
+
+These components communicate bidirectionally in order to ensure a good workflow:
+\begin{itemize}
+	\item The editor application runs Windows shell commands to run the interpreter with the source file.
+	\item The result from the interpretation is then written in a file that is read by the editor application and displayed it there.  
+\end{itemize}
+\section{Editor Application}
+\subsection{Package Diagram}
+%\Package diagram TBA
+\begin{enumerate}
+	\item Controllers Package
+	\item Views Package
+	\item Utilities Package
+\end{enumerate}
+\section{SueC Interpreter}
 
 \chapter{Testing and Validation}
 

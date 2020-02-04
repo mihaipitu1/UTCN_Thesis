@@ -18,6 +18,10 @@
 \contentsline {subsection}{\numberline {4.2.2}Syntactic Analyzer}{22}
 \contentsline {subsection}{\numberline {4.2.3}Parse Tree}{22}
 \contentsline {chapter}{Chapter{} \numberline {5}Detailed Design and Implementation}{24}
+\contentsline {section}{\numberline {5.1}Project Component Diagram}{24}
+\contentsline {section}{\numberline {5.2}Editor Application}{24}
+\contentsline {subsection}{\numberline {5.2.1}Package Diagram}{24}
+\contentsline {section}{\numberline {5.3}SueC Interpreter}{24}
 \contentsline {chapter}{Chapter{} \numberline {6}Testing and Validation}{25}
 \contentsline {section}{\numberline {6.1}Title}{25}
 \contentsline {section}{\numberline {6.2}Other title}{25}
