@@ -1,27 +1,39 @@
 %{
 #include "suec_header.h"
 #include "string.h"
+
+nodeType *leaf(int type, char* value);
+nodeType *iden(int type, int value);
+nodeType *operand(int oper, int nops, ...);
+void freeNode(nodeType* node);
+void yyerror(char* error);
+int main(void);
 %}
 
 %union {
-	int ivalue;
+	int iValue;
 	char variable;
 	char* word;
 	struct noperand *np;
 };
+
+
 
 %token INT STRING
 %token IF ELSE FOR WHILE
 %token READ WRITE
 
 %token <iValue> NUM
-%token <hcvariable> HCVAR
-%token <lcvariable> LCVAR
+%token <variable> HCVAR
+%token <variable> LCVAR
 %token <word> WORD
 
 %left GE LE EQ NE '>' '<'
 %left '+' '-'
 %left '*' '/'
+
+%type <np> statement expression statementlist condStatement forStatement 
+%type <np> whileStatement simplestatement variable
 
 %%
 
@@ -37,14 +49,14 @@ statement : simplestatement ';'
         ;
 		
 condStatement : IF '(' expression ')' statement ELSE statement { $$ = triple(IF,$3,$5,$7); }
-		| IF '(' expression ')' statement { $$ = triple(IF,$3,$5,NNULL); }
+		| IF '(' expression ')' statement { $$ = triple(IF,$3,$5,NULL); }
 		;
 		
 loopStatement : whileStatement;
 			  | forStatement 
 		;
 		
-forStatement :	FOR '('simplestatement ';' expression ';' expression ')' statement { $$ = quad(FOR,$2,$4,$6,$8); }
+forStatement :	FOR '(' simplestatement ';' expression ';' expression ')' statement { $$ = quad(FOR,$3,$5,$7,$9); }
 		;
 		
 whileStatement :  WHILE '(' expression ')' statement { $$ = operand(WHILE, $3, $5); }
@@ -56,9 +68,9 @@ statementlist : statement
               ;
 
 simplestatement : expression
-                | WRITE expression		{ $$ = operand(WRITE,$2,NNULL); }
+                | WRITE expression		{ $$ = operand(WRITE,$2,NULL); }
 				| variable '=' expression	{ $$ = operand('=', $1, $3); }
-				| READ variable 		{ $$ = operand(READ,$2,NNULL); }
+				| READ variable 		{ $$ = operand(READ,$2,NULL); }
 				;
 				
 variable : HCVAR { $$ = iden(HCVAR, $1); }

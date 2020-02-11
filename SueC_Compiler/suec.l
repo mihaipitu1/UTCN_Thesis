@@ -1,14 +1,15 @@
 %{
 #include "y.tab.h"
+#include "string.h"
 %}
 
 %%
 
-//type definition
+ 
 "int"  {return INT;}
 "string" {return STRING;}
 
-//main operations
+ 
 "if"   {return IF;}
 "else" {return ELSE;}
 "for"  {return FOR;}
@@ -17,7 +18,7 @@
 "write" {return WRITE;}
 
 
-//variables
+
 [A-Z]	{
 		yylval.variable = *yytext - 'A';
 		return HCVAR;
@@ -28,7 +29,7 @@
 		return LCVAR;
 	}
 
-//numbers and strings
+
 
 [0-9]+ 	{
 			yylval.iValue = strtol(yytext, (char**)NULL,10);
@@ -36,14 +37,13 @@
 		}
 		
 [a-zA-Z0-9]+ 	{
-					yylval.word = *yytext;
+					yylval.word = strdup(yytext);
 					return WORD;
 				}
 
-//operators
-[-()+*/<>;]	 {return *yytext;}
 
-"="		 {return ATTR;}
+[-()+*=/<>;"]	 {return *yytext;}
+
 ">="		return GE;
 "<="		return LE;
 "=="		return EQ;
