@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EditorApp.Utilities;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -10,70 +11,37 @@ namespace EditorApp.Controllers
 {
     public class FileController
     {
+        FileUtility fileUtility = new FileUtility();
         public string CreateFile()
         {
-            Stream fileStream;
             SaveFileDialog saveFileDialog = new SaveFileDialog();
 
             if(saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                using (fileStream = File.Open(saveFileDialog.FileName, FileMode.Create))
-                {
-                    using(StreamWriter sw = new StreamWriter(fileStream))
-                    {
-                        sw.Write("print \"Hello World from SueC\"\r\n");
-                        sw.Write("new print here");
-                    }
-                    return saveFileDialog.FileName;
-                }
+                return fileUtility.CreateFile(saveFileDialog.FileName);
             }
             return null;
         }
 
         public string OpenFile()
         {
-            Stream fileStream;
             OpenFileDialog openFileDialog = new OpenFileDialog();
             
             if(openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                using (fileStream = File.OpenRead(openFileDialog.FileName))
-                {
-                    Console.WriteLine("File with path: " + openFileDialog.FileName + " is opened");
-                    return openFileDialog.FileName;
-                }
+                return fileUtility.OpenFile(openFileDialog.FileName);
             }
             return null;
         }
 
         public string LoadFile(string fileName)
         {
-            string outputStream = null;
-
-            Stream fileStream;
-            using(fileStream = File.Open(fileName,FileMode.Open))
-            {
-                using(StreamReader sr = new StreamReader(fileStream))
-                {
-                    outputStream = sr.ReadToEnd();
-                }
-            }
-            return outputStream;
+            return fileUtility.LoadFile(fileName);
         }
 
         public void SaveFile(string fileName, string codeText)
         {
-            Stream fileStream; 
-
-            using (fileStream = File.Open(fileName,FileMode.Open))
-            {
-                fileStream.SetLength(0);
-                using(StreamWriter sw = new StreamWriter(fileStream))
-                {
-                    sw.Flush();
-                    sw.Write(codeText);
-                }
-            }
+            fileUtility.SaveFile(fileName, codeText);
         }
     }
 }

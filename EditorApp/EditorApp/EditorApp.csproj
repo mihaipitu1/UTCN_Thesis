@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\FileController.cs" />
+    <Compile Include="Utilities\FileUtility.cs" />
     <Compile Include="Views\FileView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,8 +90,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Utilities\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
