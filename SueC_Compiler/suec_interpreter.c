@@ -13,9 +13,9 @@ int execute_node(nodeType *p) {
 }
 
 int execute_const(nodeType *p) {
-	switch(p->const.type) {
-		case NUM: return atoi(p->const.value);
-		case WORD: return p->const.value;
+	switch(p->constant.type) {
+		case NUM: return atoi(p->constant.value);
+		case WORD: return p->constant.value;
 	}
 	return 0;
 }
@@ -29,6 +29,8 @@ int execute_id(nodeType *p) {
 }
 
 int execute_oper(nodeType *p) {
+	char ch;
+	int exec;
 	switch(p->oper.oper) {
 		//main keywords
 	case FOR: for(execute_node(p->oper.op[0]);execute_node(p->oper.op[1]);execute_node(p->oper.op[2]))
@@ -42,14 +44,16 @@ int execute_oper(nodeType *p) {
 			 else if(p->oper.nops>2)
 				execute_node(p->oper.op[2]);
 			 return 0;
-	case READ: scanf("%d", &execute_node(p->oper.op[0]));
+	case READ: scanf("%d", execute_node(p->oper.op[0]));
 			 return 0;
 	case WRITE: printf("%d\n", execute_node(p->oper.op[0]));
 			 return 0;
 		//main operations
 	case ';': execute_node(p->oper.op[0]);
 			 return execute_node(p->oper.op[1]);
-	case '=': return execute_node(p->oper.op[0]) = execute_node(p->oper.op[1]);	
+	case '=': ch = execute_node(p->oper.op[0]);
+			  exec = execute_node(p->oper.op[1]);
+			  return ch = exec;	
 	case '+': return execute_node(p->oper.op[0]) + execute_node(p->oper.op[1]);
 	case '-': return execute_node(p->oper.op[0]) - execute_node(p->oper.op[1]);
 	case '*': return execute_node(p->oper.op[0]) * execute_node(p->oper.op[1]);

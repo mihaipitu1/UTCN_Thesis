@@ -20,7 +20,7 @@ typedef struct nodeTypeTag {
 	nodeEnum type;
 	
 	union {
-		constNodeType const;
+		constNodeType constant;
 		idNodeType id;
 		operNodeType oper;
 	}

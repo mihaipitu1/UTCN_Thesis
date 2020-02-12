@@ -72,6 +72,8 @@
 
 #include "suec_header.h"
 #include "string.h"
+#include "stdarg.h"
+#include "stdlib.h"
 
 nodeType *leaf(int type, char* value);
 nodeType *iden(int type, int value);
@@ -82,7 +84,7 @@ int main(void);
 
 
 /* Line 189 of yacc.c  */
-#line 86 "y.tab.c"
+#line 88 "y.tab.c"
 
 /* Enabling traces.  */
 #ifndef YYDEBUG
@@ -153,7 +155,7 @@ typedef union YYSTYPE
 {
 
 /* Line 214 of yacc.c  */
-#line 13 "suec.y"
+#line 15 "suec.y"
 
 	int iValue;
 	char variable;
@@ -163,7 +165,7 @@ typedef union YYSTYPE
 
 
 /* Line 214 of yacc.c  */
-#line 167 "y.tab.c"
+#line 169 "y.tab.c"
 } YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
@@ -175,7 +177,7 @@ typedef union YYSTYPE
 
 
 /* Line 264 of yacc.c  */
-#line 179 "y.tab.c"
+#line 181 "y.tab.c"
 
 #ifdef short
 # undef short
@@ -474,10 +476,10 @@ static const yytype_int8 yyrhs[] =
 /* YYRLINE[YYN] -- source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    40,    40,    41,    42,    45,    46,    47,    48,    51,
-      52,    55,    56,    59,    62,    66,    67,    70,    71,    72,
-      73,    76,    77,    80,    81,    82,    83,    84,    85,    86,
-      87,    88,    89,    90,    91,    92,    93,    94
+       0,    42,    42,    43,    44,    47,    48,    49,    50,    53,
+      54,    57,    58,    61,    64,    68,    69,    72,    73,    74,
+      75,    78,    79,    82,    83,    84,    85,    86,    87,    88,
+      89,    90,    91,    92,    93,    94,    95,    96
 };
 #endif
 
@@ -1445,189 +1447,189 @@ yyreduce:
         case 2:
 
 /* Line 1455 of yacc.c  */
-#line 40 "suec.y"
+#line 42 "suec.y"
     { execute((yyvsp[(2) - (2)].np)); freeall((yyvsp[(2) - (2)].np)); }
     break;
 
   case 3:
 
 /* Line 1455 of yacc.c  */
-#line 41 "suec.y"
+#line 43 "suec.y"
     { yyerrok; }
     break;
 
   case 8:
 
 /* Line 1455 of yacc.c  */
-#line 48 "suec.y"
+#line 50 "suec.y"
     { (yyval.np) = (yyvsp[(2) - (3)].np); }
     break;
 
   case 9:
 
 /* Line 1455 of yacc.c  */
-#line 51 "suec.y"
+#line 53 "suec.y"
     { (yyval.np) = triple(IF,(yyvsp[(3) - (7)].np),(yyvsp[(5) - (7)].np),(yyvsp[(7) - (7)].np)); }
     break;
 
   case 10:
 
 /* Line 1455 of yacc.c  */
-#line 52 "suec.y"
+#line 54 "suec.y"
     { (yyval.np) = triple(IF,(yyvsp[(3) - (5)].np),(yyvsp[(5) - (5)].np),NULL); }
     break;
 
   case 13:
 
 /* Line 1455 of yacc.c  */
-#line 59 "suec.y"
+#line 61 "suec.y"
     { (yyval.np) = quad(FOR,(yyvsp[(3) - (9)].np),(yyvsp[(5) - (9)].np),(yyvsp[(7) - (9)].np),(yyvsp[(9) - (9)].np)); }
     break;
 
   case 14:
 
 /* Line 1455 of yacc.c  */
-#line 62 "suec.y"
+#line 64 "suec.y"
     { (yyval.np) = operand(WHILE, (yyvsp[(3) - (5)].np), (yyvsp[(5) - (5)].np)); }
     break;
 
   case 16:
 
 /* Line 1455 of yacc.c  */
-#line 67 "suec.y"
+#line 69 "suec.y"
     { (yyval.np) = operand(';', (yyvsp[(1) - (2)].np), (yyvsp[(2) - (2)].np)); }
     break;
 
   case 18:
 
 /* Line 1455 of yacc.c  */
-#line 71 "suec.y"
+#line 73 "suec.y"
     { (yyval.np) = operand(WRITE,(yyvsp[(2) - (2)].np),NULL); }
     break;
 
   case 19:
 
 /* Line 1455 of yacc.c  */
-#line 72 "suec.y"
+#line 74 "suec.y"
     { (yyval.np) = operand('=', (yyvsp[(1) - (3)].np), (yyvsp[(3) - (3)].np)); }
     break;
 
   case 20:
 
 /* Line 1455 of yacc.c  */
-#line 73 "suec.y"
+#line 75 "suec.y"
     { (yyval.np) = operand(READ,(yyvsp[(2) - (2)].np),NULL); }
     break;
 
   case 21:
 
 /* Line 1455 of yacc.c  */
-#line 76 "suec.y"
+#line 78 "suec.y"
     { (yyval.np) = iden(HCVAR, (yyvsp[(1) - (1)].variable)); }
     break;
 
   case 22:
 
 /* Line 1455 of yacc.c  */
-#line 77 "suec.y"
+#line 79 "suec.y"
     { (yyval.np) = iden(LCVAR, (yyvsp[(1) - (1)].variable)); }
     break;
 
   case 23:
 
 /* Line 1455 of yacc.c  */
-#line 80 "suec.y"
+#line 82 "suec.y"
     { (yyval.np) = leaf(NUM, (yyvsp[(1) - (1)].iValue)); }
     break;
 
   case 24:
 
 /* Line 1455 of yacc.c  */
-#line 81 "suec.y"
+#line 83 "suec.y"
     { (yyval.np) = leaf(WORD,(yyvsp[(1) - (1)].word)); }
     break;
 
   case 27:
 
 /* Line 1455 of yacc.c  */
-#line 84 "suec.y"
+#line 86 "suec.y"
     { (yyval.np) = operand('+', (yyvsp[(1) - (3)].np), (yyvsp[(3) - (3)].np)); }
     break;
 
   case 28:
 
 /* Line 1455 of yacc.c  */
-#line 85 "suec.y"
+#line 87 "suec.y"
     { (yyval.np) = operand('-', (yyvsp[(1) - (3)].np), (yyvsp[(3) - (3)].np)); }
     break;
 
   case 29:
 
 /* Line 1455 of yacc.c  */
-#line 86 "suec.y"
+#line 88 "suec.y"
     { (yyval.np) = operand('*', (yyvsp[(1) - (3)].np), (yyvsp[(3) - (3)].np)); }
     break;
 
   case 30:
 
 /* Line 1455 of yacc.c  */
-#line 87 "suec.y"
+#line 89 "suec.y"
     { (yyval.np) = operand('/', (yyvsp[(1) - (3)].np), (yyvsp[(3) - (3)].np)); }
     break;
 
   case 31:
 
 /* Line 1455 of yacc.c  */
-#line 88 "suec.y"
+#line 90 "suec.y"
     { (yyval.np) = operand('<', (yyvsp[(1) - (3)].np), (yyvsp[(3) - (3)].np)); }
     break;
 
   case 32:
 
 /* Line 1455 of yacc.c  */
-#line 89 "suec.y"
+#line 91 "suec.y"
     { (yyval.np) = operand('>', (yyvsp[(1) - (3)].np), (yyvsp[(3) - (3)].np)); }
     break;
 
   case 33:
 
 /* Line 1455 of yacc.c  */
-#line 90 "suec.y"
+#line 92 "suec.y"
     { (yyval.np) = operand(GE, (yyvsp[(1) - (3)].np), (yyvsp[(3) - (3)].np)); }
     break;
 
   case 34:
 
 /* Line 1455 of yacc.c  */
-#line 91 "suec.y"
+#line 93 "suec.y"
     { (yyval.np) = operand(LE, (yyvsp[(1) - (3)].np), (yyvsp[(3) - (3)].np)); }
     break;
 
   case 35:
 
 /* Line 1455 of yacc.c  */
-#line 92 "suec.y"
+#line 94 "suec.y"
     { (yyval.np) = operand(NE, (yyvsp[(1) - (3)].np), (yyvsp[(3) - (3)].np)); }
     break;
 
   case 36:
 
 /* Line 1455 of yacc.c  */
-#line 93 "suec.y"
+#line 95 "suec.y"
     { (yyval.np) = operand(EQ, (yyvsp[(1) - (3)].np), (yyvsp[(3) - (3)].np)); }
     break;
 
   case 37:
 
 /* Line 1455 of yacc.c  */
-#line 94 "suec.y"
+#line 96 "suec.y"
     { (yyval.np) = (yyvsp[(2) - (3)].np); }
     break;
 
 
 
 /* Line 1455 of yacc.c  */
-#line 1631 "y.tab.c"
+#line 1633 "y.tab.c"
       default: break;
     }
   YY_SYMBOL_PRINT ("-> $$ =", yyr1[yyn], &yyval, &yyloc);
@@ -1839,25 +1841,24 @@ yyreturn:
 
 
 /* Line 1675 of yacc.c  */
-#line 97 "suec.y"
+#line 99 "suec.y"
 
 
 #define SIZE_NODE ((char*)&p->com - (char*)p)
 
-nodeType* leaf(int type, char* value) {
+nodeType *leaf(int type, char* value) {
 	nodeType* node;
-	
 	if((node = malloc(sizeof(nodeType))) == NULL)
+	{
 		yyerror("No memory left");
-		
+	}
 	node->type = constType;
-	
-	node->const.type = type;
-	strcpy(node->const.value, value);
+	node->constant.type = type;
+	strcpy(node->constant.value, value);
 	return node;
 }
 
-nodeType* iden(int type, int value) {
+nodeType *iden(int type, int value) {
 	nodeType* node;
 	
 	if((node = malloc(sizeof(nodeType))) == NULL)
@@ -1872,7 +1873,7 @@ nodeType* iden(int type, int value) {
 }
 
 
-nodeType* operand(int oper, int nops, ...) {
+nodeType *operand(int oper, int nops, ...) {
 	va_list argList;
 	nodeType* node;
 	int i;
@@ -1912,7 +1913,7 @@ void freeNode(nodeType* node) {
 }
 
 void yyerror(char* error) {
-	fprintf(stdout, "%s\n", error);
+	printf("%s\n", error);
 }
 
 int main(void) {

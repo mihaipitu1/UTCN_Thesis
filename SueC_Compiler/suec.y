@@ -1,6 +1,8 @@
 %{
 #include "suec_header.h"
 #include "string.h"
+#include "stdarg.h"
+#include "stdlib.h"
 
 nodeType *leaf(int type, char* value);
 nodeType *iden(int type, int value);
@@ -98,20 +100,19 @@ expression : NUM			{ $$ = leaf(NUM, $1); }
 
 #define SIZE_NODE ((char*)&p->com - (char*)p)
 
-nodeType* leaf(int type, char* value) {
+nodeType *leaf(int type, char* value) {
 	nodeType* node;
-	
 	if((node = malloc(sizeof(nodeType))) == NULL)
+	{
 		yyerror("No memory left");
-		
+	}
 	node->type = constType;
-	
-	node->const.type = type;
-	strcpy(node->const.value, value);
+	node->constant.type = type;
+	strcpy(node->constant.value, value);
 	return node;
 }
 
-nodeType* iden(int type, int value) {
+nodeType *iden(int type, int value) {
 	nodeType* node;
 	
 	if((node = malloc(sizeof(nodeType))) == NULL)
@@ -126,7 +127,7 @@ nodeType* iden(int type, int value) {
 }
 
 
-nodeType* operand(int oper, int nops, ...) {
+nodeType *operand(int oper, int nops, ...) {
 	va_list argList;
 	nodeType* node;
 	int i;
@@ -166,7 +167,7 @@ void freeNode(nodeType* node) {
 }
 
 void yyerror(char* error) {
-	fprintf(stdout, "%s\n", error);
+	printf("%s\n", error);
 }
 
 int main(void) {
