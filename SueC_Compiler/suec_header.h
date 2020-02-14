@@ -26,5 +26,5 @@ typedef struct nodeTypeTag {
 	}
 } nodeType;
 
-extern int hcSym[26];
-extern int lcSym[26];
+int hcSym[26];
+int lcSym[26];

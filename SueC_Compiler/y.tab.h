@@ -83,7 +83,7 @@ typedef union YYSTYPE
 {
 
 /* Line 1676 of yacc.c  */
-#line 15 "suec.y"
+#line 17 "suec.y"
 
 	int iValue;
 	char variable;

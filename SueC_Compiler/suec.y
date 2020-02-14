@@ -2,14 +2,16 @@
 #include "suec_header.h"
 #include "string.h"
 #include "stdarg.h"
+#include "stdio.h"
 #include "stdlib.h"
+#include "y.tab.h"
 
 nodeType *leaf(int type, char* value);
 nodeType *iden(int type, int value);
 nodeType *operand(int oper, int nops, ...);
 void freeNode(nodeType* node);
 void yyerror(char* error);
-int main(void);
+
 %}
 
 %union {
@@ -18,8 +20,6 @@ int main(void);
 	char* word;
 	struct noperand *np;
 };
-
-
 
 %token INT STRING
 %token IF ELSE FOR WHILE
@@ -39,8 +39,7 @@ int main(void);
 
 %%
 
-program : program statement	{ execute($2); freeall($2); }
-	| program error ';'	{ yyerrok; }
+program : program statement	{ execute_node($2); freeNode($2); }
 	| /* NULL */
 	;
 
@@ -50,15 +49,15 @@ statement : simplestatement ';'
 		| '{' statementlist '}' { $$ = $2; }
         ;
 		
-condStatement : IF '(' expression ')' statement ELSE statement { $$ = triple(IF,$3,$5,$7); }
-		| IF '(' expression ')' statement { $$ = triple(IF,$3,$5,NULL); }
+condStatement : IF '(' expression ')' statement ELSE statement { $$ = operand(IF,$3,$5,$7); }
+		| IF '(' expression ')' statement { $$ = operand(IF,$3,$5,NULL); }
 		;
 		
 loopStatement : whileStatement;
 			  | forStatement 
 		;
 		
-forStatement :	FOR '(' simplestatement ';' expression ';' expression ')' statement { $$ = quad(FOR,$3,$5,$7,$9); }
+forStatement :	FOR '(' simplestatement ';' expression ';' expression ')' statement { $$ = operand(FOR,$3,$5,$7,$9); }
 		;
 		
 whileStatement :  WHILE '(' expression ')' statement { $$ = operand(WHILE, $3, $5); }
@@ -170,7 +169,23 @@ void yyerror(char* error) {
 	printf("%s\n", error);
 }
 
-int main(void) {
+int main(int argc, char** argv) {
+
+	FILE* yyin;
+	if(argc != 2) 
+	{
+		printf("ERROR! No input file");
+		exit(1);
+	}
+	if(!(yyin = fopen(argv[1],"r")))
+	{
+		printf("ERROR! Cannot open file.");
+		exit(1);
+	}
+	printf("The Parsing has been started on file with path=%s!\n",argv[1]);
+	
 	yyparse();
+	fclose(yyin);
+	
 	return 0;
 }
