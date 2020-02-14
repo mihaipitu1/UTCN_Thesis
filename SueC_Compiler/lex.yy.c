@@ -436,7 +436,9 @@ char *yytext_ptr;
 #line 2 "suec.l"
 #include "y.tab.h"
 #include "string.h"
-#line 440 "lex.yy.c"
+
+extern FILE* yyin;
+#line 442 "lex.yy.c"
 
 /* Macros after this point can all be overridden by user definitions in
  * section 1.
@@ -587,11 +589,11 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
 
-#line 6 "suec.l"
+#line 8 "suec.l"
 
 
  
-#line 595 "lex.yy.c"
+#line 597 "lex.yy.c"
 
 	if ( yy_init )
 		{
@@ -684,47 +686,47 @@ do_action:	/* This label is used only to access EOF actions. */
 	{ /* beginning of action switch */
 case 1:
 YY_RULE_SETUP
-#line 9 "suec.l"
+#line 11 "suec.l"
 {return INT;}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 10 "suec.l"
+#line 12 "suec.l"
 {return STRING;}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 13 "suec.l"
+#line 15 "suec.l"
 {return IF;}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 14 "suec.l"
+#line 16 "suec.l"
 {return ELSE;}
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 15 "suec.l"
+#line 17 "suec.l"
 {return FOR;}
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 16 "suec.l"
+#line 18 "suec.l"
 {return WHILE;}
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 17 "suec.l"
+#line 19 "suec.l"
 {return READ;}
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 18 "suec.l"
+#line 20 "suec.l"
 {return WRITE;}
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 22 "suec.l"
+#line 24 "suec.l"
 {
 		yylval.variable = *yytext - 'A';
 		return HCVAR;
@@ -732,7 +734,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 27 "suec.l"
+#line 29 "suec.l"
 {
 		yylval.variable = *yytext - 'a';
 		return LCVAR;
@@ -740,7 +742,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 34 "suec.l"
+#line 36 "suec.l"
 {
 			yylval.iValue = strtol(yytext, (char**)NULL,10);
 			return NUM;
@@ -748,7 +750,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 39 "suec.l"
+#line 41 "suec.l"
 {
 					yylval.word = strdup(yytext);
 					return WORD;
@@ -756,45 +758,45 @@ YY_RULE_SETUP
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 45 "suec.l"
+#line 47 "suec.l"
 {return *yytext;}
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 47 "suec.l"
+#line 49 "suec.l"
 return GE;
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 48 "suec.l"
+#line 50 "suec.l"
 return LE;
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 49 "suec.l"
+#line 51 "suec.l"
 return EQ;
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 50 "suec.l"
+#line 52 "suec.l"
 return NE;
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 52 "suec.l"
+#line 54 "suec.l"
 ;
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 54 "suec.l"
+#line 56 "suec.l"
 yyerror("Unknown character");
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 56 "suec.l"
+#line 58 "suec.l"
 ECHO;
 	YY_BREAK
-#line 798 "lex.yy.c"
+#line 800 "lex.yy.c"
 			case YY_STATE_EOF(INITIAL):
 				yyterminate();
 
@@ -1678,10 +1680,12 @@ int main()
 	return 0;
 	}
 #endif
-#line 56 "suec.l"
+#line 58 "suec.l"
 
 int yywrap(void)
 {
 	return 1; 
 }
+
+
 	

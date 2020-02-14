@@ -12,6 +12,8 @@ nodeType *operand(int oper, int nops, ...);
 void freeNode(nodeType* node);
 void yyerror(char* error);
 
+extern FILE* yyin;
+
 %}
 
 %union {
@@ -171,7 +173,6 @@ void yyerror(char* error) {
 
 int main(int argc, char** argv) {
 
-	FILE* yyin;
 	if(argc != 2) 
 	{
 		printf("ERROR! No input file");

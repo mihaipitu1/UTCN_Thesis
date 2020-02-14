@@ -1,2 +1,2 @@
-write 4+5
-write 3-2
+write 4+5;
+write 3-2;

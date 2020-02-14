@@ -1,6 +1,8 @@
 %{
 #include "y.tab.h"
 #include "string.h"
+
+extern FILE* yyin;
 %}
 
 %%
@@ -58,4 +60,6 @@ int yywrap(void)
 {
 	return 1; 
 }
+
+
 	
