@@ -335,7 +335,7 @@ static yyconst int yy_ec[256] =
 
        14,   15,   16,   17,   18,   12,   12,   19,   12,   20,
        21,   12,   12,   22,   23,   24,   12,   12,   25,   12,
-       12,   12,    1,    1,    1,    1,    1,    1,    1,    1,
+       12,   12,    5,    1,    5,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -744,7 +744,7 @@ case 11:
 YY_RULE_SETUP
 #line 36 "suec.l"
 {
-			yylval.iValue = strtol(yytext, (char**)NULL,10);
+			yylval.iValue = atoi(yytext);
 			return NUM;
 		}
 	YY_BREAK
@@ -1684,7 +1684,7 @@ int main()
 
 int yywrap(void)
 {
-	return 1; 
+	return 1;
 }
 
 

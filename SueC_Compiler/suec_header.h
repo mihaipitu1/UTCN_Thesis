@@ -2,7 +2,8 @@ typedef enum { constType, idType, operType } nodeEnum;
 
 typedef struct {
 	int type;
-	char* value;
+	int iValue;
+	char* sValue;
 } constNodeType;
 
 typedef struct {

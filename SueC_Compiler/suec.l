@@ -34,7 +34,7 @@ extern FILE* yyin;
 
 
 [0-9]+ 	{
-			yylval.iValue = strtol(yytext, (char**)NULL,10);
+			yylval.iValue = atoi(yytext);
 			return NUM;
 		}
 		
@@ -44,7 +44,7 @@ extern FILE* yyin;
 				}
 
 
-[-()+*=/<>;"]	 {return *yytext;}
+[-()+*=/<>;{}"]	 {return *yytext;}
 
 ">="		return GE;
 "<="		return LE;
@@ -58,7 +58,7 @@ extern FILE* yyin;
 %%
 int yywrap(void)
 {
-	return 1; 
+	return 1;
 }
 
 

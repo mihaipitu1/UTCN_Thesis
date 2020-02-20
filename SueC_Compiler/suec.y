@@ -13,7 +13,7 @@ void freeNode(nodeType* node);
 void yyerror(char* error);
 
 extern FILE* yyin;
-
+extern int yydebug;
 %}
 
 %union {
@@ -45,7 +45,7 @@ program : program statement	{ execute_node($2); freeNode($2); }
 	| /* NULL */
 	;
 
-statement : simplestatement ';'
+statement : simplestatement
         | loopStatement
 		| condStatement
 		| '{' statementlist '}' { $$ = $2; }
@@ -71,9 +71,9 @@ statementlist : statement
               ;
 
 simplestatement : expression
-                | WRITE expression		{ $$ = operand(WRITE,$2,NULL); }
+                | WRITE "(" expression ")"		{ $$ = operand(WRITE,$3,NULL); }
 				| variable '=' expression	{ $$ = operand('=', $1, $3); }
-				| READ variable 		{ $$ = operand(READ,$2,NULL); }
+				| READ "(" variable ")"		{ $$ = operand(READ,$3,NULL); }
 				;
 				
 variable : HCVAR { $$ = iden(HCVAR, $1); }
@@ -108,8 +108,11 @@ nodeType *leaf(int type, char* value) {
 		yyerror("No memory left");
 	}
 	node->type = constType;
+	switch(type) {
+		case NUM: node->constant.iValue = atoi(value);
+		case WORD: strcpy(node->constant.sValue,value);
+	}
 	node->constant.type = type;
-	strcpy(node->constant.value, value);
 	return node;
 }
 
@@ -168,25 +171,15 @@ void freeNode(nodeType* node) {
 }
 
 void yyerror(char* error) {
-	printf("%s\n", error);
+	extern char* yytext;
+	extern int yylineno;
+	fprintf(stdout,"%s At Line: %d - Char: %c\n", error,yylineno,*yytext);
 }
 
-int main(int argc, char** argv) {
-
-	if(argc != 2) 
-	{
-		printf("ERROR! No input file");
-		exit(1);
-	}
-	if(!(yyin = fopen(argv[1],"r")))
-	{
-		printf("ERROR! Cannot open file.");
-		exit(1);
-	}
-	printf("The Parsing has been started on file with path=%s!\n",argv[1]);
-	
+int main(void)
+{
+	yydebug = 1;
 	yyparse();
-	fclose(yyin);
-	
 	return 0;
 }
+	
