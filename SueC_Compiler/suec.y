@@ -38,31 +38,32 @@ extern int yydebug;
 
 %type <np> statement expression statementlist condStatement forStatement 
 %type <np> whileStatement simplestatement variable
+%start program
 
 %%
 
-program : program statement	{ execute_node($2); freeNode($2); }
+program : statementlist	{ execute_node($1); freeNode($1); }
 	| /* NULL */
 	;
 
-statement : simplestatement
+statement : simplestatement ";"
         | loopStatement
 		| condStatement
 		| '{' statementlist '}' { $$ = $2; }
         ;
 		
-condStatement : IF '(' expression ')' statement ELSE statement { $$ = operand(IF,$3,$5,$7); }
-		| IF '(' expression ')' statement { $$ = operand(IF,$3,$5,NULL); }
+condStatement : IF '(' expression ')' statement ELSE statement { printf("Got in IF-ELSE\n");$$ = operand(IF,3,$3,$5,$7); }
+		| IF '(' expression ')' statement { printf("Got in IF\n");$$ = operand(IF,2,$3,$5); }
 		;
 		
 loopStatement : whileStatement;
 			  | forStatement 
 		;
 		
-forStatement :	FOR '(' simplestatement ';' expression ';' expression ')' statement { $$ = operand(FOR,$3,$5,$7,$9); }
+forStatement :	FOR '(' simplestatement ';' expression ';' expression ')' statement {printf("Got in FOR\n"); $$ = operand(FOR,4,$3,$5,$7,$9); }
 		;
 		
-whileStatement :  WHILE '(' expression ')' statement { $$ = operand(WHILE, $3, $5); }
+whileStatement :  WHILE '(' expression ')' statement { printf("Got in WHILE\n");$$ = operand(WHILE, 2,$3,$5); }
 		;
 		
 		
@@ -71,29 +72,29 @@ statementlist : statement
               ;
 
 simplestatement : expression
-                | WRITE "(" expression ")"		{ $$ = operand(WRITE,$3,NULL); }
-				| variable '=' expression	{ $$ = operand('=', $1, $3); }
-				| READ "(" variable ")"		{ $$ = operand(READ,$3,NULL); }
+                | WRITE "(" expression ")"		{ printf("Got in WRITE\n");$$ = operand(WRITE, 1, $3); }
+				| variable '=' expression	{ printf("Got in =\n");$$ = operand('=',2 , $1, $3); }
+				| READ "(" variable ")"		{ printf("Got in READ\n");$$ = operand(READ, 1, $3); }
 				;
 				
-variable : HCVAR { $$ = iden(HCVAR, $1); }
-		| LCVAR  { $$ = iden(LCVAR, $1); }
+variable : HCVAR { printf("Got in HCVAR\n"); $$ = iden(HCVAR, $1); }
+		| LCVAR  { printf("Got in LCVAR\n"); $$ = iden(LCVAR, $1); }
 		;
 
-expression : NUM			{ $$ = leaf(NUM, $1); }
-	   | WORD 				{ $$ = leaf(WORD,$1); }
-	   | INT variable			
-	   | STRING variable			
-	   | expression '+' expression	{ $$ = operand('+', $1, $3); }
-	   | expression '-' expression	{ $$ = operand('-', $1, $3); }
-	   | expression '*' expression	{ $$ = operand('*', $1, $3); }
-	   | expression '/' expression	{ $$ = operand('/', $1, $3); }
-	   | expression '<' expression	{ $$ = operand('<', $1, $3); }
-	   | expression '>' expression	{ $$ = operand('>', $1, $3); }
-	   | expression GE expression	{ $$ = operand(GE, $1, $3); }
-	   | expression LE expression	{ $$ = operand(LE, $1, $3); }
-	   | expression NE expression	{ $$ = operand(NE, $1, $3); }
-	   | expression EQ expression	{ $$ = operand(EQ, $1, $3); }
+expression : NUM			{ printf("Got in NUM\n");$$ = leaf(NUM, $1); }
+	   | WORD 				{ printf("Got in WORD\n");$$ = leaf(WORD,$1); }
+	   | INT variable		{printf("Got in INT\n");}	
+	   | STRING variable	{printf("Got in STRING\n");}		
+	   | expression '+' expression	{ printf("Got in +\n"); $$ = operand('+', 2, $1, $3); }
+	   | expression '-' expression	{ printf("Got in -\n");$$ = operand('-', 2, $1, $3); }
+	   | expression '*' expression	{ printf("Got in *\n");$$ = operand('*', 2, $1, $3); }
+	   | expression '/' expression	{ printf("Got in /\n");$$ = operand('/', 2, $1, $3); }
+	   | expression '<' expression	{ printf("Got in <\n");$$ = operand('<', 2, $1, $3); }
+	   | expression '>' expression	{ printf("Got in >\n");$$ = operand('>', 2, $1, $3); }
+	   | expression GE expression	{ printf("Got in >=\n");$$ = operand(GE, 2, $1, $3); }
+	   | expression LE expression	{ printf("Got in <=\n");$$ = operand(LE, 2, $1, $3); }
+	   | expression NE expression	{ printf("Got in !=\n");$$ = operand(NE, 2, $1, $3); }
+	   | expression EQ expression	{ printf("Got in ==\n");$$ = operand(EQ, 2, $1, $3); }
 	   | '(' expression ')'		{ $$ = $2; }
 	   ;
 
@@ -173,12 +174,12 @@ void freeNode(nodeType* node) {
 void yyerror(char* error) {
 	extern char* yytext;
 	extern int yylineno;
-	fprintf(stdout,"%s At Line: %d - Char: %c\n", error,yylineno,*yytext);
+	printf("%s At Line: %d - Char: %c\n", error,yylineno,*yytext);
 }
 
 int main(void)
 {
-	yydebug = 1;
+	// yydebug = 1;
 	yyparse();
 	return 0;
 }

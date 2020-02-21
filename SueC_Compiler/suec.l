@@ -38,7 +38,7 @@ extern FILE* yyin;
 			return NUM;
 		}
 		
-[a-zA-Z0-9]+ 	{
+[a-zA-Z]+ 	{
 					yylval.word = strdup(yytext);
 					return WORD;
 				}
