@@ -1,6 +1,4 @@
 ﻿using EditorApp.Controllers;
-using EditorApp.Utilities;
-using EditorApp.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,30 +9,30 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EditorApp
+namespace EditorApp.Views
 {
-    public partial class Start : Form
+    public partial class BaseView : Form
     {
         FileController fileController;
-        public Start()
+        public BaseView()
         {
             InitializeComponent();
             fileController = new FileController();
         }
 
-        private void NewToolStripMenuItem_Click(object sender, EventArgs e)
+        protected void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string fileName = fileController.CreateFile();
-            FileView flView = new FileView(fileName);
-            flView.Show();
+            FileView fileView = new FileView(fileName);
+            fileView.Show();
             this.Hide();
         }
 
-        private void OpenToolStripMenuItem_Click(object sender, EventArgs e)
+        protected void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string fileName = fileController.OpenFile();
-            FileView flView = new FileView(fileName);
-            flView.Show();
+            FileView fileView = new FileView(fileName);
+            fileView.Show();
             this.Hide();
         }
     }

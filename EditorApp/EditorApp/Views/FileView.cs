@@ -11,46 +11,20 @@ using System.Windows.Forms;
 
 namespace EditorApp.Views
 {
-    public partial class FileView : Form
+    public partial class FileView : BaseView
     {
         FileController fileController = new FileController();
         public FileView(string fileName)
         {
             InitializeComponent();
             this.Text = fileName;
-            LoadCodeTextBox(fileName);
+            LoadCodeBox(fileName);
         }
 
-        private void LoadCodeTextBox(string fileName)
+        private void LoadCodeBox(string fileName)
         {
             string codeBox = fileController.LoadFile(fileName);
-            this.codeTextBox.Text = codeBox;
-        }
-
-        private void NewToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            string fileName = fileController.CreateFile();
-            FileView flView = new FileView(fileName);
-            flView.Show();
-            this.Hide();
-        }
-
-        private void OpenToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            string fileName = fileController.OpenFile();
-            FileView flView = new FileView(fileName);
-            flView.Show();
-            this.Hide();
-        }
-
-        private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            string fileName = this.Text;
-            string codeText = this.codeTextBox.Text;
-
-            Console.WriteLine("This is the codeText: \n\n" + codeText + "\n\n");
-
-            fileController.SaveFile(fileName, codeText);
+            this.codeBox.Text = codeBox;
         }
     }
 }

@@ -32,7 +32,6 @@ namespace EditorApp.Utilities
             {
                 return fileName;
             }
-            return null;
         }
 
         public string LoadFile(string fileName)
